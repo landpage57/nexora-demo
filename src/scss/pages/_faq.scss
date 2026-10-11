@@ -1,0 +1,761 @@
+// ========================================
+// FAQ Hero
+// ========================================
+
+.nx-faq-hero {
+   
+    overflow: hidden;
+    background: #eff6ff;
+ 
+}
+
+// ========================================
+// Hero Content
+// ========================================
+
+.nx-faq-hero-content {
+    padding: 26px 56px 16px 0;
+    margin: 0 auto;
+    
+}
+
+
+// ========================================
+// Breadcrumb
+// ========================================
+
+.nx-faq-hero .nx-breadcrumb {
+    
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 0.82rem;
+
+}
+
+/* ========================================
+   Eyebrow
+======================================== */
+
+.nx-faq-hero .nx-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+}
+
+.nx-faq-hero .nx-eyebrow::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    background: $nx-primary;
+    flex-shrink: 0;
+}
+
+
+// ========================================
+// Heading
+// ========================================
+
+.nx-faq-hero h1 {
+    margin: 16px 0;
+
+    color: $nx-dark;
+
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+
+// ========================================
+// Description
+// ========================================
+
+.nx-faq-hero p {
+    max-width: 540px;
+    margin: 0 0 25px;
+
+    color: $nx-body;
+
+    font-size: 18px;
+    line-height: $nx-line-height-base;
+}
+
+
+// ========================================
+// FAQ Search
+// ========================================
+
+.nx-faq-search {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 525px;
+    min-height: 42px;
+
+    padding: 4px;
+
+    background: $nx-white;
+
+    border: 1px solid $nx-border;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+
+    i {
+        flex: 0 0 auto;
+
+        margin-left: 14px;
+
+        color: $nx-muted;
+        font-size: 0.9rem;
+    }
+
+    input {
+        flex: 1;
+        min-width: 0;
+
+        height: 36px;
+
+        padding: 0 10px;
+
+        color: $nx-dark;
+        background: transparent;
+
+        border: 0;
+        outline: none;
+
+        font-size: 0.875rem;
+
+        &::placeholder {
+            color: $nx-muted;
+        }
+    }
+
+    .nx-btn {
+        flex: 0 0 auto;
+
+        min-height: 28px;
+        padding: 0 8px;
+
+        border-radius: 6px;
+    }
+}
+
+
+// ========================================
+// Hero Media
+// ========================================
+
+.nx-faq-hero__media {
+    position: relative;
+    width: calc(100% + 10vw);
+    margin-left: -40px;
+    height: 100px;
+    min-height: 400px;
+    
+    overflow: hidden;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        width: 200px;
+        height: 100%;
+
+        background: linear-gradient(
+            to right,
+            #eff6ff 0%,
+            rgba(239, 246, 255, 0.75) 35%,
+            rgba(239, 246, 255, 0) 100%
+        );
+
+        pointer-events: none;
+    }
+
+    img {
+        display: block;
+        
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        object-fit: cover;
+        object-position: 100% center;
+        
+    }
+}
+
+
+// ========================================
+// FAQ Categories
+// ========================================
+
+.nx-faq-categories {
+    padding: 20px 0;
+    background: $nx-white;
+}
+
+.nx-faq-categories-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.nx-faq-categories-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+}
+
+.nx-faq-categories-eyebrow::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    background: $nx-primary;
+    flex-shrink: 0;
+}
+
+.nx-faq-categories-heading h2 {
+    margin: 0 0 6px;
+    color: $nx-dark;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.nx-faq-categories-heading p {
+    margin: 0;
+    color: $nx-body;
+    font-size: 0.875rem;
+    line-height: 0.2;
+}
+
+
+// Category Card
+
+.nx-faq-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 148px;
+    min-width: 148px;
+    padding: 10px 18px 12px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nx-faq-categories-grid {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nx-faq-category-card:hover {
+    color: inherit;
+    border-color: #bfdbfe;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+    transform: translateY(-2px);
+}
+
+
+// Category Icon
+
+.nx-faq-category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 7px;
+    color: $nx-primary;
+    background: $nx-primary-light;
+    border-radius: 50%;
+}
+
+.nx-faq-category-icon i {
+    font-size: 1.15rem;
+}
+
+
+// Category Title
+
+.nx-faq-category-card h3 {
+    margin: 0 0 3px;
+    color: $nx-dark;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+// Category Description
+
+.nx-faq-category-card p {
+    min-height: 40px;
+    margin: 0 0 3px;
+    color: $nx-body;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+
+// Category Link
+
+.nx-faq-category-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    color: $nx-primary;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.nx-faq-category-link i {
+    font-size: 0.75rem;
+}
+
+
+// ========================================
+// FAQ Questions
+// ========================================
+
+.nx-faq-questions {
+    padding: 12px 0 18px;
+    background: $nx-white;
+}
+
+.nx-faq-questions-inner {
+    padding: 20px 7.5% 28px;
+    background: $nx-surface;
+    border-radius: 8px;
+}
+
+.nx-faq-questions-heading {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.nx-faq-questions-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+}
+
+.nx-faq-questions-eyebrow::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    background: $nx-primary;
+    flex-shrink: 0;
+}
+
+.nx-faq-questions-heading h2 {
+    margin: 0 0 5px;
+    color: $nx-dark;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.nx-faq-questions-heading p {
+    margin: 0 0 3px;
+    min-height: 10px;
+    color: $nx-body;
+    font-size: 0.875rem;
+    line-height: 0.2;
+}
+
+
+// FAQ Accordion
+
+.nx-faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.nx-faq-item {
+    overflow: hidden;
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: 7px;
+}
+
+
+// Summary
+
+.nx-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 38px;
+    padding: 0 18px;
+    color: $nx-dark;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+}
+
+.nx-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.nx-faq-item summary i {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    color: $nx-dark;
+    font-size: 0.875rem;
+}
+
+
+// Answer
+
+.nx-faq-answer {
+    padding: 8px 18px 10px;
+}
+
+.nx-faq-answer p {
+    max-width: 800px;
+    margin: 0;
+    color: $nx-body;
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+
+
+
+/* General Questions: native details accordion */
+details.nx-faq-item > summary {
+    user-select: none;
+}
+
+details.nx-faq-item:not([open]) > .nx-faq-answer {
+    display: none;
+}
+
+details.nx-faq-item[open] > .nx-faq-answer {
+    display: block;
+}
+
+
+
+// ========================================
+// FAQ Support CTA
+// ========================================
+
+.nx-faq-support {
+    padding: 0 0 30px;
+    background: $nx-white;
+}
+
+.nx-faq-support-inner {
+    position: relative;
+    min-height: 180px;
+    padding: 30px 10%;
+    overflow: hidden;
+    background: #eff6ff;
+    border-radius: 6px;
+}
+
+.nx-faq-support-inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(239, 246, 255, 0.98) 0%,
+            rgba(239, 246, 255, 0.9) 0%,
+            rgba(239, 246, 255, 0.15) 100%
+        ),
+        url("/assets/images/about/faq-support.png");
+
+        background-position: center, right center;
+        background-size: 100% 100%, 80% auto;
+        background-repeat: no-repeat;
+
+    z-index: 0;
+    
+}
+
+.nx-faq-support-content {
+    position: relative;
+    z-index: 1;
+    max-width: 440px;
+}
+
+.nx-faq-support-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+}
+
+.nx-faq-support-eyebrow::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    background: $nx-primary;
+    flex-shrink: 0;
+}
+
+.nx-faq-support h2 {
+    margin: 0 0 5px;
+    color: $nx-dark;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.nx-faq-support p {
+    max-width: 420px;
+    margin: 0 0 12px;
+    color: $nx-body;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.nx-faq-support .nx-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 34px;
+    padding: 0 16px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+}
+
+.nx-faq-support .nx-btn i {
+    font-size: 0.8rem;
+}
+
+// ========================================
+// FAQ Hero - Tablet 768px to 991.98px
+// ========================================
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .nx-faq-hero .row {
+        padding-top: 30px;
+    }
+
+    .nx-faq-hero__media {
+        width: 100%;
+        height: 300px;
+        min-height: 0;
+        margin: 0;
+        margin-bottom: 50px;
+        overflow: hidden;
+        
+        border-radius: $nx-radius-lg;
+
+        transform: translateY(25px);
+        
+
+        &::before {
+
+            background: none;
+            
+
+        }
+
+    }
+
+    .nx-faq-hero__media img {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        
+    }
+
+}
+
+
+/* FAQ Hero - Mobile */
+@media (max-width: 575.98px) {
+
+    .nx-faq-hero {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .nx-faq-hero .row {
+        min-height: auto;
+        padding-bottom: 0;
+    }
+
+    .nx-faq-hero__content {
+        padding-top: 24px;
+    }
+
+    .nx-faq-hero__media {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 20px 0 0;
+        overflow: hidden;
+        border-radius: 10px;
+
+        &::before {
+
+            background: none;
+            
+        }
+    }
+
+    .nx-faq-hero__media img {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+        object-position: center;
+        border-radius: inherit;
+        transform: none !important;
+    }
+
+    .nx-faq-categories {
+        padding-top: 10px;
+    }
+
+    .nx-faq-categories-heading h2 {
+        margin-top: 5px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .nx-faq-categories-heading p {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .nx-faq-categories .row.g-3 {
+        margin-top: -30px;
+    }
+
+    
+    .nx-faq-questions-inner {
+        h2 {
+            margin-bottom: -5px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+    }
+
+    .nx-faq-item summary {
+        min-height: 56px;
+        padding: 0 18px;
+    }
+
+    /* FAQ Support CTA - Mobile */    
+    .nx-faq-support-inner {
+        min-height: 230px;
+        padding: 24px 20px 0;
+        background: #eff6ff;
+    }
+
+    .nx-faq-support-inner::before {
+        inset: auto 0 0;
+        height: 150px;
+
+        background:
+            url("/assets/images/about/faq-support.png");
+
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .nx-faq-support-content {
+        max-width: 100%;
+        padding-bottom: 20px;
+    }
+    
+
+}

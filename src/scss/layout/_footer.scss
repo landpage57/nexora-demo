@@ -1,0 +1,170 @@
+// ========================================
+// Nexora — Footer
+// ========================================
+
+.nx-footer {
+    padding: $nx-space-4 0 $nx-space-3;
+    background: #0B1728;
+       
+}
+
+.nx-footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: $nx-space-5;
+    padding-bottom: $nx-space-2;
+    border-bottom: 1px solid $nx-dark-secondary;
+}
+
+.nx-footer-logo {
+    display: inline-block;
+    margin-bottom: $nx-space-1;
+    color: $nx-white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: $nx-font-weight-bold;
+}
+
+.nx-footer-logo__letter {
+    color: $nx-primary;
+}
+
+.nx-footer-brand p {
+    margin: 2px 0 0;
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 280px;
+}
+
+.nx-footer-social {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+    margin-left: 0;
+    margin-top: 6px;
+    padding-left: 0;
+}
+
+.nx-footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+    padding: 0;
+    color: $nx-muted;
+    
+    border-radius: $nx-radius-md;
+    transition: $nx-transition-fast;
+
+    &:hover {
+        color: $nx-white;
+        border-color: $nx-muted;
+    }
+}
+
+.nx-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: $nx-space-3;
+}
+
+.nx-footer-column h3 {
+    margin-bottom: $nx-space-1;
+    color: $nx-white;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-footer-column a {
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: 1;
+    transition: $nx-transition-fast;
+
+    &:hover {
+        color: $nx-white;
+    }
+}
+
+.nx-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: $nx-space-4;
+    padding-top: $nx-space-2;
+    
+
+    border-top: 1px solid rgba($nx-white, 0.08);
+}
+
+.nx-footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.nx-footer-bottom span {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ========================================
+   FOOTER — MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-footer {
+        padding: 10px 0 24px;
+    }
+
+    .nx-footer-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $nx-space-7;
+        padding-bottom: $nx-space-6;
+    }
+
+    .nx-footer-brand {
+        text-align: center;
+    }
+
+    .nx-footer-brand p {
+        max-width: 280px;
+        margin: $nx-space-3 auto 0;
+        margin-top: 2px;
+    }
+
+    .nx-footer-social {
+        justify-content: center;
+    }
+
+    .nx-footer-column {
+        text-align: center;
+    }
+
+    .nx-footer-column h3 {
+        margin-bottom: $nx-space-3;
+    }
+
+    .nx-footer-column a {
+        display: block;
+    }
+
+    .nx-footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $nx-space-2;
+        padding-top: $nx-space-4;
+        text-align: center;
+    }
+
+}

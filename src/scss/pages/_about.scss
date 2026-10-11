@@ -1,0 +1,1008 @@
+/* ========================================
+   Nexora About Page
+======================================== */
+
+.nx-about-hero {
+    background: #eff6ff;
+    overflow: hidden;
+}
+
+.nx-about-hero__content {
+    padding: 26px 56px 16px 0;
+    margin: 0 auto;
+}
+
+.nx-about-hero__content h1 {
+    max-width: 620px;
+    margin: 16px 0;
+
+    color: #0f172a;
+
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.nx-about-hero__content h1 span {
+    color: #2563eb;
+}
+
+.nx-about-hero__content p {
+    max-width: 540px;
+    margin: 0 0 25px;
+
+    color: #475569;
+
+    font-size: 18px;
+    line-height: $nx-line-height-base;
+}
+
+.nx-about-hero .row {
+    min-height: 400px;
+}
+
+.nx-about-hero .col-lg-6 {
+    position: relative;
+    
+}
+
+.nx-about-hero .col-lg-6 {
+    position: relative;
+    padding: 0;
+}
+
+.nx-about-hero__media {
+    position: relative;
+
+    width: calc(100% + 10vw);
+    height: 100%;
+    min-height: 400px;
+
+    overflow: hidden;
+
+    border: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        width: 200px;
+        height: 100%;
+
+        background: linear-gradient(
+            to right,
+            #eff6ff 4%,
+            rgba(239, 246, 255, 0.75) 40%,
+            rgba(239, 246, 255, 0) 100%
+        );
+
+        pointer-events: none;
+    }
+    
+}
+
+.nx-about-hero__media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+    object-position: 100% center;
+    
+}
+
+
+/* ========================================
+   Breadcrumb
+======================================== */
+
+.nx-breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 0.82rem;
+}
+
+.nx-breadcrumb a {
+    color: #334155;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   Eyebrow
+======================================== */
+
+.nx-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2563eb;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+}
+
+.nx-eyebrow::before {
+    content: "";
+
+    width: 20px;
+    height: 2px;
+
+    background: $nx-primary;
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   Buttons
+======================================== */
+
+.nx-actions {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.nx-btn {
+    min-height: 36px;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.nx-btn-primary {
+    color: #ffffff;
+
+    background: #2563eb;
+
+    border: 1px solid #2563eb;
+}
+
+.nx-btn-primary:hover {
+    color: #ffffff;
+
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+}
+
+.nx-btn-outline {
+    color: #2563eb;
+
+    background: #ffffff;
+
+    border: 1px solid #2563eb;
+}
+
+.nx-btn-light {
+    color: #2563eb;
+
+    background: #ffffff;
+
+    border: 1px solid #ffffff;
+}
+
+
+/* ========================================
+   General Section
+======================================== */
+
+.nx-section {
+    padding: 30px 0;
+}
+
+.nx-section-muted {
+    background: #f8fafc;
+}
+
+
+/* ========================================
+   About Intro
+======================================== */
+
+.nx-about-intro__media {
+    height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.nx-about-intro__media img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.nx-about-intro__content {
+    padding-left: 54px;
+}
+
+.nx-about-intro__content h2,
+.nx-why h2,
+.nx-section-heading h2 {
+    margin: 14px 0 16px;
+
+    color: #0f172a;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 700;
+}
+
+.nx-about-intro__content h2 {
+    max-width: 600px;
+}
+
+.nx-about-intro__content > p,
+.nx-why > .container p,
+.nx-section-heading > p {
+    color: #475569;
+
+    line-height: 1.75;
+}
+
+.nx-about-intro__content > p {
+    max-width: 620px;
+    margin-bottom: 32px;
+}
+
+.nx-feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 22px;
+    row-gap: 28px;
+}
+
+.nx-feature {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.nx-feature__icon {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nx-feature strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.nx-feature small {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   Section Heading
+======================================== */
+
+.nx-section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 48px;
+}
+
+
+/* ========================================
+   Approach
+======================================== */
+
+.nx-approach-card {
+    position: relative;
+
+    height: 100%;
+    min-height: 250px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.nx-step-number {
+    color: #2563eb;
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.nx-card-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 16px 0 18px;
+
+    border-radius: 11px;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    font-weight: 700;
+}
+
+.nx-approach-card h3 {
+    margin: 0 0 10px;
+
+    color: #0f172a;
+
+    font-size: 1.2rem;
+}
+
+.nx-approach-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   Why Nexora
+======================================== */
+
+.nx-why-item {
+    padding: 10px 0;
+}
+
+.nx-why-item p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.55;
+
+    font-size: 0.92rem;
+}
+
+
+/* ========================================
+   Stats
+======================================== */
+
+.nx-about-stats {
+    padding: 0 0 42px;
+}
+
+.nx-stats-bar {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    padding: 22px 10px;
+
+    background: #eff6ff;
+
+    border-radius: 12px;
+}
+
+.nx-stats-bar > div {
+    position: relative;
+
+    padding: 8px 20px;
+
+    text-align: center;
+}
+
+.nx-stats-bar > div + div::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 10%;
+
+    width: 1px;
+    height: 80%;
+
+    background: #bfdbfe;
+}
+
+.nx-stats-bar strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #2563eb;
+
+    font-size: 2rem;
+
+    line-height: 1;
+}
+
+.nx-stats-bar span {
+    color: #475569;
+
+    font-size: 0.88rem;
+}
+
+
+/* ========================================
+   Process
+======================================== */
+
+.nx-process-track {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 28px;
+}
+
+.nx-process-track::before {
+    content: "";
+
+    position: absolute;
+
+    top: 22px;
+
+    left: 10%;
+    right: 10%;
+
+    border-top: 1px dashed #93c5fd;
+}
+
+.nx-process-item {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+}
+
+.nx-process-item > span {
+    width: 44px;
+    height: 44px;
+
+    margin: 0 auto 18px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border: 1px solid #dbeafe;
+
+    font-weight: 700;
+}
+
+.nx-process-item strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0f172a;
+}
+
+.nx-process-item p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 0.86rem;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   Final CTA
+======================================== */
+
+.nx-about-cta {
+    padding: 0;
+}
+
+.nx-cta-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+
+    padding: 10px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    border-radius: 14px 14px 0 0;
+
+    color: #ffffff;
+
+    background: #2563eb;
+
+    overflow: hidden;
+}
+
+.nx-cta-card .nx-eyebrow {
+    color: #dbeafe;
+}
+
+.nx-cta-card .nx-eyebrow::before {
+    background: #dbeafe;
+}
+
+.nx-cta-card h2 {
+    margin: 10px 0 6px;
+
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.nx-cta-card h2 span {
+    color: $nx-white;
+}
+
+.nx-cta-card p {
+    margin: 0;
+
+    color: #dbeafe;
+}
+
+.nx-about-cta .nx-btn-light:hover {
+    background: $nx-white;
+    color: $nx-primary;
+    border-color: $nx-white;
+    box-shadow: none;
+    transform: none;
+}
+
+.nx-about-cta .nx-btn-light:hover span {
+    color: $nx-primary;
+    transform: none;
+}
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 991.98px) {
+
+    .nx-about-hero {
+        background: #eff6ff;
+    }
+
+    .nx-about-hero__content {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .nx-about-hero__media,
+    .nx-about-hero__media img {
+
+        width: calc(100% - 40px);
+        height: 360px;
+        min-height: 0;
+        margin: 0;
+        margin-top: -15px;
+        clip-path: none;
+        border-radius: $nx-radius-lg;
+        overflow: hidden;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+        transform: translateY(0);
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .nx-about-intro__content {
+        transform: translateY(20px);
+    }
+
+    .nx-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Approach heading */
+    .nx-approach .nx-section-heading {
+        transform: translateY(-40px);
+    }
+    
+    /* Approach cards */
+    .nx-approach > .container > .row.g-3 {
+        transform: translateY(-40px);
+    }
+
+    .nx-approach {
+        
+        padding-bottom: 10px;
+    }
+
+    .nx-approach-card {
+        min-height: 0;
+        height: auto;
+        padding: 30px;
+    }
+
+    .nx-approach-header {
+        display: flex;
+        align-items: center;
+        gap: $nx-space-4;
+        margin-top: -30px;
+        margin-bottom: -10px;
+    }
+
+    .nx-approach-card > p {
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    .nx-why > .container > .row > .col-lg-5 {
+        transform: translateY(-30px);
+    }
+
+    .nx-why .col-lg-7 {
+        transform: translateY(-60px);
+    }
+
+    .nx-why-item {
+        padding: 6px 0;
+    }
+
+    .nx-why-header {
+        display: flex;
+        align-items: center;
+        gap: $nx-space-4;
+    }
+
+    .nx-why-item > p {
+        margin: 6px 0 0;
+        line-height: 1.55;
+    }
+
+    .nx-about-stats {
+        transform: translateY(-80px);
+        margin-bottom: -80px;
+    }
+
+    .nx-process {
+        padding-top: 16px;
+        padding-bottom: 30px;
+    }
+
+    .nx-process-track {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    .nx-process-track::before {
+        display: none;
+    }
+
+    .nx-process-item {
+        display: grid;
+
+        grid-template-columns: 44px 1fr;
+
+        column-gap: 16px;
+
+        text-align: left;
+    }
+
+    .nx-process-item > span {
+        grid-row: span 2;
+
+        margin: 0;
+    }
+
+    .nx-process-item p {
+        grid-column: 2;
+    }
+
+    .nx-cta-card {
+        padding: 42px;
+    }
+
+}
+
+/* ========================================
+   ABOUT HERO — MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-about-hero__content {
+        margin-top: -5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .nx-about-hero__content h1 {
+        font-size: 34px;
+        line-height: 1.08;
+        letter-spacing: -0.5px;
+        max-width: 100%;
+    }
+
+}
+
+
+
+/* ========================================
+   ABOUT HERO MEDIA — MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-about-hero__media {
+        width: 100%;
+        height: 300px;
+        min-height: 0;
+        margin: 0;
+        overflow: hidden;
+
+        clip-path: none;
+        border-radius: $nx-radius-lg;
+
+        transform: translateY(-20px);
+    }
+
+    .nx-about-hero__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+
+    .nx-about-intro__media {
+        height: 340px;
+        transform: translateY(-30px);
+    }
+
+    .nx-about-intro__content {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        transform: translateY(-5px);
+    }
+
+    .nx-about-intro {
+        padding-bottom: 2px;
+    }
+
+}
+
+/* ========================================
+   ABOUT APPROACH CARDS — MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-approach {
+        padding-top: 56px;
+        padding-bottom: 10px;
+    }
+
+    .nx-approach-card {
+        min-height: 0;
+        height: auto;
+        
+    }
+
+    .nx-approach-header {
+        display: flex;
+        align-items: center;
+        gap: $nx-space-4;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+
+    .nx-card-icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nx-approach-header h3 {
+        margin: 0;
+    }
+
+    .nx-approach-card > p {
+        margin: 0;
+        line-height: 1.55;
+    }
+
+}
+
+/* ========================================
+   ABOUT WHY — MOBILE OVERFLOW FIX
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-why .row.align-items-center.g-5 {
+        --bs-gutter-x: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nx-why {
+        padding-top: 50px;
+        padding-bottom: 54px;
+    }
+
+    .nx-why > .container > .row {
+        --bs-gutter-y: 3rem;
+    }
+
+    .nx-why .col-lg-7 > .row {
+        --bs-gutter-y: 0.2rem;
+    }
+
+    .nx-why-item {
+        display: block;
+        padding: 6px 0;
+    }
+
+    .nx-why-header {
+        display: flex;
+        align-items: center;
+        gap: $nx-space-4;
+    }
+
+    .nx-why-item > p {
+        margin: 6px 0 0;
+        line-height: 1.55;
+    }
+    
+}
+
+/* ========================================
+   About Stats - Mobile
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-feature-grid,
+    .nx-stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .nx-stats-bar > div + div::before {
+        display: none;
+    }
+
+    .nx-about-stats {
+        transform: translateY(-80px);
+        margin-bottom: -80px;
+    }
+}
+
+
+/* ========================================
+   About Process — Mobile
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-process {
+        padding-top: 16px;
+        padding-bottom: 30px;
+    }
+    
+}
+
+/* ========================================
+   About CTA — Mobile
+======================================== */
+
+@media (max-width: 767.98px) {
+
+    .nx-cta-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px 28px;
+    }
+}

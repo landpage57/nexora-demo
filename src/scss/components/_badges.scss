@@ -1,0 +1,81 @@
+// ========================================
+// Nexora — Badges
+// ========================================
+
+.nx-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 24px;
+    padding: 4px 9px;
+
+    border: 1px solid transparent;
+    border-radius: $nx-radius-badge;
+
+    font-size: 12px;
+    font-weight: $nx-font-weight-semibold;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+// ----------------------------------------
+// Primary
+// ----------------------------------------
+
+.nx-badge-primary {
+    background-color: $nx-primary-light;
+    color: $nx-primary;
+}
+
+
+// ----------------------------------------
+// Success
+// ----------------------------------------
+
+.nx-badge-success {
+    background-color: rgba(22, 163, 74, 0.10);
+    color: $nx-success;
+}
+
+
+// ----------------------------------------
+// Warning
+// ----------------------------------------
+
+.nx-badge-warning {
+    background-color: rgba(217, 119, 6, 0.10);
+    color: $nx-warning;
+}
+
+
+// ----------------------------------------
+// Danger
+// ----------------------------------------
+
+.nx-badge-danger {
+    background-color: rgba(220, 38, 38, 0.10);
+    color: $nx-danger;
+}
+
+
+// ----------------------------------------
+// Dark
+// ----------------------------------------
+
+.nx-badge-dark {
+    background-color: $nx-dark;
+    color: $nx-white;
+}
+
+
+// ----------------------------------------
+// Outline
+// ----------------------------------------
+
+.nx-badge-outline {
+    background-color: transparent;
+    border-color: $nx-border;
+    color: $nx-body;
+}

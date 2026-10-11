@@ -1,0 +1,1019 @@
+// ========================================
+// Nexora — Sections
+// ========================================
+
+.nx-section {
+    padding: $nx-space-8 0;
+}
+
+.nx-section-header {
+    max-width: 680px;
+    margin-bottom: $nx-space-8;
+}
+
+.nx-section-header-centered {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.nx-section-eyebrow {
+    display: inline-block;
+    margin-bottom: $nx-space-4;
+
+    color: $nx-primary;
+    font-size: 13px;
+    font-weight: $nx-font-weight-semibold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nx-section-title {
+    margin-bottom: $nx-space-4;
+
+    color: $nx-dark;
+    font-size: 40px;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.2;
+}
+
+.nx-section-description {
+    margin-bottom: 0;
+
+    color: $nx-muted;
+    font-size: 16px;
+}
+
+// ----------------------------------------
+// Trusted Companies
+// ----------------------------------------
+
+.nx-trust {
+    padding: $nx-space-4 0;
+    
+    background: $nx-surface;
+}
+
+.nx-trust-label {
+    margin-bottom: $nx-space-2;
+
+    color: $nx-muted;
+    font-size: 14px;
+    font-weight: $nx-font-weight-medium;
+    text-align: center;
+}
+
+.nx-trust-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $nx-space-6;
+}
+
+.nx-trust-logo {
+    color: $nx-dark-secondary;
+    font-size: 18px;
+    font-weight: $nx-font-weight-semibold;
+    letter-spacing: -0.02em;
+}
+
+// ----------------------------------------
+// Services
+// ----------------------------------------
+
+.nx-services .nx-section-header {
+    margin-bottom: 20px;
+}
+
+.nx-service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: $nx-space-7;
+
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+
+    transition: $nx-transition-base;
+
+    &:hover {
+        border-color: $nx-primary-light;
+        transform: translateY(-2px);
+    }
+}
+
+.nx-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    margin-bottom: $nx-space-5;
+
+    background: $nx-primary-light;
+    color: $nx-primary;
+    border-radius: $nx-radius-md;
+
+    font-size: 22px;
+}
+
+.nx-service-title {
+    margin-bottom: $nx-space-3;
+
+    color: $nx-dark;
+    font-size: 20px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-service-description {
+    margin-bottom: $nx-space-2;
+
+    color: $nx-muted;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.nx-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $nx-space-2;
+
+    margin-top: auto;
+    color: $nx-primary;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+
+    transition: $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary-dark;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Move the Services section upward on mobile */
+    .nx-services {
+        margin-top: -10px;
+        padding-bottom: 10px;
+        min-height: 0;
+    }
+
+    /* Reduce the empty space below the Services section */
+    .nx-services.nx-section {
+        padding-bottom: 34px;
+    }
+}
+
+// ----------------------------------------
+// About
+// ----------------------------------------
+
+.nx-about {
+    background: $nx-surface;
+}
+
+.nx-about-visual {
+    position: relative;
+
+    height: 410px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 0;
+    padding-bottom: $nx-space-5;
+}
+
+.nx-about-panel {
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: $nx-radius-xl;
+}
+
+.nx-about-panel img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.nx-about-content {
+    max-width: 560px;
+
+    .nx-section-header {
+        margin-bottom: $nx-space-5;
+    }
+}
+
+.nx-about-features {
+    display: flex;
+    flex-direction: column;
+    gap: $nx-space-5;
+    margin-bottom: $nx-space-6;
+}
+
+.nx-about-feature {
+    display: flex;
+    gap: $nx-space-4;
+    align-items: flex-start;
+
+    
+
+    .nx-about-feature-icon {
+        flex: 0 0 44px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        background: $nx-primary-light;
+        color: $nx-primary;
+        border-radius: $nx-radius-md;
+
+        font-size: 19px;
+    }
+
+    h3 {
+        margin-bottom: $nx-space-1;
+
+        color: $nx-dark;
+        font-size: 17px;
+        font-weight: $nx-font-weight-semibold;
+    }
+
+    p {
+        margin-bottom: 0;
+
+        color: $nx-muted;
+        font-size: 14px;
+        line-height: $nx-line-height-base;
+    }
+}
+
+
+/* ==========================
+       About Visual - Mobile
+   ========================== */
+@media (max-width: 767.98px) {
+
+    /* Remove desktop spacing around the visual */
+    .nx-about-visual {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Make the visual frame wider and move it upward */
+    .nx-about-panel {
+        width: calc(100% + 32px);
+        height: auto;
+        margin-left: -16px;
+        margin-right: -16px;
+        transform: translateY(-54px);
+    }
+
+    /* Keep the image proportional */
+    .nx-about-panel img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Move the About content upward on mobile */
+    .nx-about-content {
+        transform: translateY(-80px);
+        margin-bottom: -20px;
+    }
+
+    /* Prevent the About section Bootstrap row from overflowing */
+    .nx-about .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+// ----------------------------------------
+// Stats
+// ----------------------------------------
+
+.nx-stats {
+    padding: $nx-space-5 0;
+
+    background: $nx-white;
+    
+}
+
+.nx-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $nx-space-6;
+}
+
+.nx-stat {
+    text-align: center;
+
+    strong {
+        display: block;
+        margin-bottom: $nx-space-2;
+
+        color: $nx-dark;
+        font-size: 32px;
+        font-weight: $nx-font-weight-bold;
+        line-height: 1.2;
+    }
+
+    span {
+        color: $nx-muted;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Keep hero statistics evenly aligned on mobile */
+    .nx-hero-stats {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        align-items: start;
+        text-align: center;
+
+        
+    }
+
+    /* Keep each statistic centered */
+    .nx-hero-stat {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Keep statistic numbers aligned */
+    .nx-hero-stat strong {
+        font-size: 20px;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    /* Give all statistic labels the same height */
+    .nx-hero-stat span {
+        display: block;
+        width: 100%;
+        margin-top: 4px;
+        padding: 0;
+        font-size: 10px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+
+}
+
+
+// ----------------------------------------
+// Process
+// ----------------------------------------
+
+.nx-process {
+    background: $nx-surface;
+}
+
+.nx-process .nx-section-header {
+    margin-bottom: 20px;
+}
+
+.nx-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $nx-space-7;
+}
+
+.nx-process-step {
+    position: relative;
+
+    padding-top: $nx-space-4;
+
+    border-top: 2px solid $nx-border;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: -5px;
+        left: 0;
+
+        width: 8px;
+        height: 8px;
+
+        background: $nx-primary;
+        border-radius: 50%;
+    }
+}
+
+.nx-process-number {
+    display: block;
+    margin-bottom: $nx-space-4;
+
+    color: $nx-primary;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-process-step h3 {
+    margin-bottom: $nx-space-3;
+
+    color: $nx-dark;
+    font-size: 20px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-process-step p {
+    margin-bottom: 0;
+
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: $nx-line-height-base;
+}
+
+/* ============================
+       Process Section - Mobile
+   ============================ */
+@media (max-width: 767.98px) {
+
+    /* Stack all process steps vertically */
+    .nx-process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 100%;
+        transform: translateY(5px);
+        margin-bottom: -5px;
+    }
+
+    /* Keep each process step inside the viewport */
+    .nx-process-step {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Move the Process section header upward on mobile */
+    .nx-process .nx-section-header {
+        transform: translateY(-5px);
+    }
+}
+
+// ----------------------------------------
+// Featured Work
+// ----------------------------------------
+
+.nx-work {
+    background: $nx-white;
+}
+
+.nx-work .nx-section-header {
+    margin-bottom: 20px;
+}
+
+.nx-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $nx-space-3;
+}
+
+.nx-work-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+    transition: $nx-transition-base;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    }
+}
+
+.nx-work-preview {
+    height: 170px;
+    overflow: hidden;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nx-work-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.nx-work-info {
+    padding: $nx-space-6;
+}
+
+.nx-work-category {
+    display: inline-block;
+    margin-bottom: $nx-space-3;
+    color: $nx-primary;
+    font-size: 13px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-work-info h3 {
+    margin-bottom: $nx-space-2;
+    color: $nx-dark;
+    font-size: 20px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-work-info p {
+    margin-bottom: $nx-space-1;
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: $nx-line-height-base;
+}
+
+.nx-work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $nx-space-2;
+    height: 37px;
+    margin-top: auto;
+
+    color: $nx-dark;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+    transition: $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Move the Featured Work heading upward */
+    .nx-work .nx-section-header {
+        margin-top: -15px;
+    }
+
+    /* Move the Featured Work content upward with the header */
+    .nx-work .nx-work-grid {
+
+        margin-bottom: -20px;
+        
+    }
+}
+
+// ----------------------------------------
+// Testimonials
+// ----------------------------------------
+
+.nx-testimonials {
+    background: $nx-surface;
+}
+
+.nx-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $nx-space-3;
+}
+
+.nx-testimonials .nx-section-header {
+    margin-bottom: 20px;
+}
+
+.nx-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    padding: $nx-space-6;
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+}
+
+.nx-testimonial-rating {
+    display: flex;
+    gap: $nx-space-1;
+    margin-bottom: $nx-space-5;
+    color: $nx-primary;
+    font-size: 14px;
+}
+
+.nx-testimonial-card blockquote {
+    margin: 0 0 $nx-space-6;
+    color: $nx-dark;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.nx-testimonial-author {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: $nx-space-3;
+}
+
+.nx-testimonial-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    background: $nx-primary-light;
+    color: $nx-primary;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-testimonial-author strong {
+    display: block;
+    margin-bottom: 2px;
+    color: $nx-dark;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-testimonial-author span {
+    display: block;
+    color: $nx-muted;
+    font-size: 13px;
+}
+
+@media (max-width: 767.98px) {
+
+    /* Move the Testimonials section header upward on mobile */
+    .nx-testimonials .nx-section-header {
+        margin-top: -15px;
+    }
+
+    /* Stack testimonial cards vertically */
+    .nx-testimonials-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 16px;
+        
+        margin-bottom: -30px;
+    }
+
+    /* Keep each testimonial card inside the viewport */
+    .nx-testimonial-card {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+// ----------------------------------------
+// Pricing
+// ----------------------------------------
+
+.nx-pricing {
+    background: $nx-white;
+}
+
+.nx-pricing-grid {
+    position: relative;
+    top: -20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $nx-space-3;
+    align-items: stretch;
+}
+
+.nx-pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: $nx-space-7;
+    
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+}
+
+.nx-pricing-card-featured {
+    border-color: $nx-primary;
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.10);
+}
+
+.nx-pricing-badge {
+    position: absolute;
+    top: $nx-space-5;
+    right: $nx-space-5;
+    padding: $nx-space-1 $nx-space-3;
+    background: $nx-primary-light;
+    color: $nx-primary;
+    border-radius: $nx-radius-badge;
+    font-size: 12px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-pricing-card-header {
+    margin-bottom: $nx-space-6;
+}
+
+.nx-pricing-card-header h3 {
+    margin-bottom: $nx-space-2;
+    color: $nx-dark;
+    font-size: 21px;
+    font-weight: $nx-font-weight-semibold;
+}
+
+.nx-pricing-card-header p {
+    margin-bottom: 0;
+    color: $nx-muted;
+    font-size: 14px;
+}
+
+.nx-pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: $nx-space-2;
+    margin-bottom: $nx-space-3;
+}
+
+.nx-pricing-price strong {
+    color: $nx-dark;
+    font-size: 32px;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.2;
+}
+
+.nx-pricing-price span {
+    color: $nx-muted;
+    font-size: 13px;
+}
+
+.nx-pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: $nx-space-1;
+    margin: 0 0 $nx-space-7;
+    padding: 0;
+    list-style: none;
+}
+
+.nx-pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: $nx-space-3;
+    color: $nx-body;
+    font-size: 14px;
+}
+
+.nx-pricing-features i {
+    color: $nx-success;
+    font-size: 16px;
+}
+
+
+.nx-pricing-action {
+    margin-top: auto;
+}
+
+.nx-pricing-action .nx-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.nx-pricing-card .nx-btn-outline {
+    background-color: $nx-white;
+    border-color: $nx-border;
+    color: $nx-primary;
+}
+
+.nx-pricing-card .nx-btn-outline:hover {
+    background-color: $nx-white;
+    border-color: $nx-primary;
+    color: $nx-primary;
+}
+
+@media (max-width: 767.98px) {
+
+    /* Reduce the empty space below Pricing */
+    .nx-pricing.nx-section {
+        padding-top: 50px;
+        margin-top: -30px;
+    }
+
+    .nx-pricing.nx-section .nx-pricing-grid {
+        margin-top: 10px;
+    }
+}
+
+// ----------------------------------------
+// FAQ
+// ----------------------------------------
+
+.nx-faq {
+    background: $nx-surface;
+}
+
+.nx-faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.nx-faq .nx-section-header {
+    margin-bottom: 16px;
+}
+
+
+.nx-faq-item {
+    background: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-md;
+
+    & + .nx-faq-item {
+        margin-top: $nx-space-2;
+    }
+}
+
+.nx-faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: $nx-space-3 $nx-space-4;
+    background: transparent;
+    border: 0;
+    color: $nx-dark;
+    font-size: 15px;
+    font-weight: $nx-font-weight-semibold;
+    text-align: left;
+    cursor: pointer;
+
+    i {
+        flex: 0 0 auto;
+        margin-left: $nx-space-4;
+        color: $nx-muted;
+        font-size: 18px;
+    }
+}
+
+.nx-faq-question i {
+    transition: transform 0.2s ease;
+}
+
+.nx-faq-answer {
+    display: none;
+}
+
+.nx-faq-item.active .nx-faq-answer {
+    display: block;
+}
+
+.nx-faq-answer {
+    padding: 0 28px 24px;
+    margin-top: -15px;
+
+    p {
+        margin: 0;
+        color: $nx-muted;
+        font-size: 14px;
+        line-height: $nx-line-height-base;
+    }
+}
+
+@media (max-width: 767.98px) {
+    
+    /* Reduce the space above FAQ on mobile */
+    .nx-faq.nx-section {
+        padding-top: 50px;
+        margin-top: -10px;
+    }
+
+    /* Move only the FAQ cards upward */
+    .nx-faq-list {
+        
+        margin-bottom: -50px;
+    }
+}
+
+// ----------------------------------------
+// Final CTA
+// ----------------------------------------
+
+.nx-final-cta {
+    padding: $nx-space-6 0;
+    
+    background: #102A4C;
+    
+    
+}
+
+.nx-final-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $nx-space-8;
+}
+
+.nx-final-cta-content {
+    max-width: 680px;
+}
+
+.nx-final-cta-content .nx-section-eyebrow {
+    margin-bottom: $nx-space-3;
+}
+
+.nx-final-cta-content h2 {
+    margin-bottom: $nx-space-4;
+    color: $nx-white;
+    font-size: 40px;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.2;
+}
+
+.nx-final-cta-content h2 span {
+    color: $nx-primary;
+}
+
+.nx-final-cta-content p {
+    max-width: 560px;
+    margin-bottom: 0;
+    color: $nx-muted;
+    font-size: 16px;
+    line-height: $nx-line-height-base;
+}
+
+.nx-final-cta-action {
+    flex: 0 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Pull the Final CTA section upward */
+    .nx-final-cta {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* =========================
+       Final CTA - Mobile
+       ========================= */
+
+    /* Stack CTA content and action vertically */
+    .nx-final-cta-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+    }
+
+    /* Center CTA content on mobile */
+    .nx-final-cta-content {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Keep CTA action inside the viewport */
+    .nx-final-cta-action {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    /* Keep the CTA button at a controlled width */
+    .nx-final-cta-action .nx-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}

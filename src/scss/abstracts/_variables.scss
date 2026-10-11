@@ -1,0 +1,88 @@
+// ========================================
+// Nexora — Design Tokens
+// ========================================
+
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+
+$nx-primary: #2563eb;
+$nx-primary-dark: #1d4ed8;
+$nx-primary-light: #eff6ff;
+
+$nx-dark: #0f172a;
+$nx-dark-secondary: #334155;
+
+$nx-body: #475569;
+$nx-muted: #64748b;
+
+$nx-border: #e2e8f0;
+
+$nx-white: #ffffff;
+$nx-surface: #f8fafc;
+
+$nx-success: #16a34a;
+$nx-warning: #d97706;
+$nx-danger: #dc2626;
+
+
+// ----------------------------------------
+// Typography
+// ----------------------------------------
+
+$nx-font-family-base: "Inter", sans-serif;
+
+$nx-font-size-base: 1rem;
+$nx-line-height-base: 1.65;
+
+$nx-font-weight-regular: 400;
+$nx-font-weight-medium: 500;
+$nx-font-weight-semibold: 600;
+$nx-font-weight-bold: 700;
+$nx-font-weight-extrabold: 800;
+
+
+// ----------------------------------------
+// Border Radius
+// ----------------------------------------
+
+$nx-radius-sm: 6px;
+$nx-radius-md: 8px;
+$nx-radius-lg: 14px;
+$nx-radius-xl: 18px;
+$nx-radius-badge: 8px;
+
+
+// ----------------------------------------
+// Spacing
+// ----------------------------------------
+
+$nx-space-1: 4px;
+$nx-space-2: 8px;
+$nx-space-3: 12px;
+$nx-space-4: 16px;
+$nx-space-5: 20px;
+$nx-space-6: 24px;
+$nx-space-7: 32px;
+$nx-space-8: 40px;
+$nx-space-9: 48px;
+$nx-space-10: 64px;
+$nx-space-11: 80px;
+$nx-space-12: 96px;
+$nx-space-13: 120px;
+
+
+// ----------------------------------------
+// Container
+// ----------------------------------------
+
+$nx-container-max-width: 1200px;
+
+
+// ----------------------------------------
+// Transitions
+// ----------------------------------------
+
+$nx-transition-fast: 150ms ease;
+$nx-transition-base: 250ms ease;
+$nx-transition-slow: 300ms ease;

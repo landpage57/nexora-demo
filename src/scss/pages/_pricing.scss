@@ -1,0 +1,569 @@
+// ========================================
+// Nexora — Pricing Page
+// ========================================
+
+
+// ========================================
+// Pricing Hero
+// ========================================
+
+.nx-pricing-hero {
+  
+  background: $nx-surface;
+  overflow: hidden;
+
+  &__content {
+    padding: 26px 56px 16px 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nx-breadcrumb {
+    margin-bottom: 18px;
+
+  }
+
+  .nx-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+
+    &::before {
+        content: "";
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        background: $nx-primary;
+        flex-shrink: 0;
+    }
+
+  }
+
+  h1 {
+    margin: 0 0 $nx-space-5;
+    color: $nx-dark;
+    font-size: 40px;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.1;
+
+    span {
+      color: $nx-primary;
+    }
+  }
+
+  p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: $nx-body;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+
+// ========================================
+// Pricing Plans
+// ========================================
+
+.nx-pricing-plans {
+  background: $nx-white;
+}
+
+.nx-section-heading {
+  margin-bottom: 30px;
+}
+
+.nx-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $nx-space-5;
+  max-width: 1100px;
+  margin: $nx-space-2 auto 0;
+  
+}
+
+.nx-pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: $nx-space-7;
+  background: $nx-white;
+  border: 1px solid $nx-border;
+  border-radius: $nx-radius-lg;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+  transition:
+    transform $nx-transition-base,
+    box-shadow $nx-transition-base,
+    border-color $nx-transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  &__header {
+    margin-bottom: $nx-space-5;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: $nx-space-3;
+    color: $nx-dark;
+    font-size: 1.25rem;
+    font-weight: $nx-font-weight-bold;
+  }
+
+  &__header p {
+    min-height: 32px;
+    margin: 0;
+    color: $nx-muted;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: $nx-space-4;
+    color: $nx-dark;
+  }
+
+  &__currency {
+    margin-right: 2px;
+    font-size: 1.25rem;
+    font-weight: $nx-font-weight-semibold;
+  }
+
+  &__price strong {
+    font-size: 2.45rem;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  &__period {
+    margin-left: $nx-space-2;
+    color: $nx-muted;
+    font-size: 0.875rem;
+  }
+
+  > .nx-btn {
+    width: 100%;
+    margin-bottom: $nx-space-5;
+  }
+
+  &__features {
+    margin-top: auto;
+
+    h3 {
+      margin-bottom: $nx-space-3;
+      color: $nx-dark-secondary;
+      font-size: 0.8125rem;
+      font-weight: $nx-font-weight-semibold;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $nx-space-2;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: $nx-space-3;
+      color: $nx-body;
+      font-size: 0.9375rem;
+      line-height: 1.3;
+
+      i {
+        flex: 0 0 auto;
+        color: $nx-primary;
+        font-size: 1rem;
+        font-weight: $nx-font-weight-bold;
+      }
+    }
+  }
+
+  // Featured Plan
+  &--featured {
+    border: 2px solid $nx-primary;
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
+
+    &:hover {
+      border-color: $nx-primary;
+      box-shadow: 0 20px 48px rgba(37, 99, 235, 0.16);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 4px 16px;
+    color: $nx-white;
+    background: $nx-primary;
+    border-radius: 0 0 $nx-radius-md $nx-radius-md;
+    font-size: 0.75rem;
+    font-weight: $nx-font-weight-semibold;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  &--featured .nx-pricing-card__header {
+    padding-top: $nx-space-5;
+  }
+}
+
+
+// ========================================
+// Feature Comparison
+// ========================================
+
+.nx-pricing-comparison {
+  background: $nx-surface;
+}
+
+.nx-pricing-table-wrap {
+  max-width: 1000px;
+  margin: $nx-space-7 auto 0;
+  overflow-x: auto;
+  background: $nx-white;
+  border: 1px solid $nx-border;
+  border-radius: $nx-radius-lg;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.nx-pricing-table {
+  width: 100%;
+  min-width: 700px;
+  margin: 0;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: $nx-space-4 $nx-space-5;
+    border-bottom: 1px solid $nx-border;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th {
+    color: $nx-dark;
+    background: $nx-surface;
+    font-size: 0.875rem;
+    font-weight: $nx-font-weight-semibold;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 40%;
+    text-align: left;
+  }
+
+  td {
+    color: $nx-body;
+    font-size: 0.875rem;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  td i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    color: $nx-white;
+    background: $nx-primary;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: $nx-font-weight-extrabold;
+  }
+}
+
+
+// ========================================
+// Pricing FAQ
+// ========================================
+
+.nx-pricing-faq {
+  background: $nx-white;
+}
+
+.nx-pricing-faq__list {
+  max-width: 850px;
+  margin: $nx-space-7 auto 0;
+}
+
+.nx-pricing-faq__item {
+  border-bottom: 1px solid $nx-border;
+
+  &:first-child {
+    border-top: 1px solid $nx-border;
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $nx-space-3;
+    padding: $nx-space-4 0;
+    color: $nx-dark;
+    font-size: 1rem;
+    font-weight: $nx-font-weight-semibold;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    span {
+      flex: 0 0 auto;
+      color: $nx-primary;
+      font-size: 1.25rem;
+      font-weight: $nx-font-weight-regular;
+      transition: transform $nx-transition-fast;
+    }
+  }
+
+  p {
+    max-width: 760px;
+    margin: 0;
+    padding: 0 0 $nx-space-4;
+    color: $nx-body;
+    font-size: 0.9375rem;
+    line-height: 0;
+  }
+
+  &[open] {
+    summary span {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+// ========================================
+// Pricing CTA
+// ========================================
+
+.nx-pricing-cta {
+  padding: $nx-space-10 0;
+  background: $nx-white;
+
+  .nx-cta-card {
+    padding: $nx-space-3 $nx-space-5;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: $nx-white;
+    background: $nx-primary;
+    border-radius: $nx-radius-lg;
+  }
+
+  .nx-eyebrow {
+    margin-bottom: $nx-space-3;
+    color: $nx-primary-light;
+  }
+
+  h2 {
+    margin-bottom: $nx-space-3;
+    color: $nx-dark;
+  }
+
+  p {
+    max-width: 620px;
+    margin: -8px 0 0;
+    color: rgba(255, 255, 255, 0.72);
+  }
+}
+
+.nx-pricing-cta {
+  .nx-btn-light {
+    &:hover,
+    &:focus,
+    &:active {
+      background: $nx-white;
+      color: $nx-primary;
+      border-color: $nx-white;
+    }
+  }
+}
+
+// ========================================
+// Responsive
+// ========================================
+
+@media (max-width: 991.98px) {
+
+  .nx-pricing-hero {
+    padding-bottom: 10px;
+  }
+
+  .nx-pricing-plans {
+    padding-top: 20px;
+    background: $nx-white;
+  }
+
+  .nx-pricing-plans {
+
+    padding-bottom: 32px;
+
+    .nx-section-heading p {
+      margin-top: -10px;
+    }
+  }
+
+  .nx-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+    gap: 24px;
+    margin-top: 80px;
+  }
+
+  .nx-pricing-grid > .nx-pricing-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 348px;
+    margin: 0;
+  }
+
+  .nx-pricing-card--featured {
+    grid-column: auto;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nx-pricing-comparison {
+
+    padding-top: 20px;
+
+    .nx-section-heading p {
+      margin-top: -10px;
+    }
+  }
+
+  .nx-pricing-table-wrap {
+    margin-top: -10px;
+  }
+
+  .nx-pricing-faq {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .nx-section-heading p {
+      margin-top: -10px;
+    }
+  }
+
+  .nx-pricing-faq__list {
+    margin-top: -10px;
+  }
+
+  .nx-pricing-cta {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+  .nx-pricing-hero {
+    padding: -10px 0 0;
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    p {
+
+      font-size: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+    }
+  }
+
+  .nx-pricing-hero__content {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+  }
+
+  .nx-pricing-hero .nx-eyebrow,
+  .nx-pricing-hero h1,
+  .nx-pricing-hero p {
+    position: relative;
+    left: 20px;
+    transform: translateY(-10px);
+    
+    
+  }
+
+  .nx-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+
+    margin-top: 70px;
+    margin-bottom: -60px;
+  }
+
+  .nx-pricing-card--featured {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .nx-pricing-table-wrap {
+    border-radius: $nx-radius-md;
+  }
+
+  .nx-pricing-faq__item {
+    summary {
+      padding: $nx-space-2 0;
+    }
+  }
+
+  .nx-pricing-faq__item p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+
+  .nx-pricing-cta {
+
+    .nx-cta-card {
+      padding: $nx-space-5;
+    }
+
+    span {
+      color: #ffffff;
+    }
+    
+  }
+
+}

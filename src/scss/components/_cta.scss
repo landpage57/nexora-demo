@@ -1,0 +1,82 @@
+// ========================================
+// Nexora — CTA
+// ========================================
+
+.nx-cta {
+    padding: $nx-space-8;
+    background-color: $nx-dark;
+    border-radius: $nx-radius-xl;
+    color: $nx-white;
+}
+
+.nx-cta-content {
+    max-width: 720px;
+}
+
+.nx-cta-title {
+    margin-bottom: $nx-space-2;
+
+    color: $nx-white;
+    font-size: 26px;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.2;
+}
+
+.nx-cta-description {
+    margin-bottom: $nx-space-5;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.nx-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: $nx-space-3;
+}
+
+.nx-cta .nx-btn-outline {
+    color: $nx-white;
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+        color: $nx-dark;
+        background-color: $nx-white;
+        border-color: $nx-white;
+    }
+}
+
+@include media-down(md) {
+    .nx-cta {
+        padding: $nx-space-7;
+    }
+
+    .nx-cta-title {
+        font-size: 28px;
+    }
+
+    .nx-cta-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@include media-down(sm) {
+    .nx-cta {
+        padding: $nx-space-6;
+        border-radius: $nx-radius-lg;
+    }
+
+    .nx-cta-title {
+        font-size: 24px;
+    }
+
+    .nx-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        .nx-btn {
+            width: 100%;
+        }
+    }
+}

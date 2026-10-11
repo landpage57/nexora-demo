@@ -1,0 +1,706 @@
+/* ========================================
+   WORK PAGE
+======================================== */
+
+
+/* ========================================
+   WORK HERO
+======================================== */
+
+.nx-work-hero {
+    padding: 0;
+    background: #eff6ff;
+    overflow: hidden;
+    
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        padding: 26px 56px 16px 0;
+    }
+
+    .nx-breadcrumb {
+        margin-bottom: 10px;
+    }
+
+    .nx-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        &::before {
+            content: "";
+            
+
+            width: 20px;
+            height: 2px;
+
+            background: $nx-primary;
+            flex-shrink: 0;
+        }
+    }
+
+    h1 {
+        color: $nx-dark;
+
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+
+        margin: 16px 0;
+
+        span {
+            
+            color: $nx-primary;
+        }
+    }
+
+    p {
+        max-width: 510px;
+
+        color: $nx-body;
+
+        font-size: 18px;
+        line-height: $nx-line-height-base;
+
+        margin: 0 0 24px;
+    }
+
+
+    /* Actions */
+
+    .nx-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 22px;
+    }
+
+
+    /* Stats */
+
+    &__stats {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+
+        margin-top: 22px;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 150px;
+        padding-right: 28px;
+        margin-right: 28px;
+
+        border-right: 1px solid $nx-border;
+
+        &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+            border-right: 0;
+        }
+
+        strong {
+
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: $nx-dark;
+        }
+
+        span {
+            
+            margin-top: 7px;
+
+            font-size: 0.82rem;
+            line-height: 1.4;
+            color: $nx-muted;
+        }
+    }
+
+
+    /* Hero Media */
+
+    &__media {
+        position: relative;
+
+        width: calc(100% + 10vw);
+        margin-left: 0;
+        height: 455px;
+        min-height: 0;
+
+        
+        
+        background: #eff6ff;
+
+        overflow: hidden;
+        border: none;
+        
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        
+        width: 600px;
+        height: 100%;
+
+            background: linear-gradient(
+                to right,
+                #eff6ff 5%,
+                rgba(239, 246, 255, 0.75) 45%,
+                rgba(239, 246, 255, 0) 100%
+                );
+
+            pointer-events: none;
+        }
+
+        img {
+            
+
+            background: #eff6ff;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: 100% center;
+        }
+    }
+
+    
+}
+
+/* ========================================
+   WORK PROJECTS
+======================================== */
+
+.nx-work-projects {
+
+    .nx-section-heading {
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 22px;
+    }
+}
+
+
+/* ========================================
+   WORK FILTER
+======================================== */
+
+.nx-work-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 32px;
+}
+
+
+.nx-work-filter__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 28px;
+    padding: 6px 14px;
+
+    border: 1px solid $nx-border;
+    border-radius: 8px;
+
+    background: $nx-white;
+
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $nx-dark-secondary;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        border-color: $nx-primary;
+        color: $nx-primary;
+    }
+
+    &.active {
+        border-color: $nx-primary;
+        background: $nx-primary;
+        color: $nx-white;
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.16);
+    }
+}
+
+/* ========================================
+   WORK PROJECT GRID
+======================================== */
+
+.nx-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 24px;
+    row-gap: 0;
+
+    margin: 0;
+}
+
+.nx-work-item {
+    width: 100%;
+    min-width: 0;
+}
+
+/* ========================================
+   WORK CARD
+======================================== */
+
+.nx-work-card {
+    width: 100%;
+    height: 95%;
+    margin: 0;
+
+    overflow: hidden;
+
+    border: 1px solid $nx-border;
+    border-radius: 14px;
+
+    background: $nx-white;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+
+        border-color: rgba(37, 99, 235, 0.18);
+
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+
+        .nx-work-card__media img {
+            transform: scale(1.03);
+        }
+
+        .nx-work-card__link {
+            color: $nx-primary;
+        }
+    }
+}
+
+
+/* ========================================
+   WORK CARD MEDIA
+======================================== */
+
+.nx-work-card__media {
+    position: relative;
+
+    width: 100%;
+    height: 210px;
+    
+
+    overflow: hidden;
+
+    background: $nx-surface;
+
+    img {
+        
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        transition: transform 0.35s ease;
+    }
+}
+
+
+/* ========================================
+   WORK CARD CONTENT
+======================================== */
+
+.nx-work-card__content {
+    
+    display: flex;
+    flex-direction: column;
+
+    height: 190px;
+    min-height: 0;
+
+    padding: 24px;
+}
+
+.nx-work-card__content h3 {
+    margin: 0;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+
+    color: $nx-dark;
+}
+
+.nx-work-card__content p {
+    height: 72px;
+    margin: 2px 0 0;
+    line-height: 1.4 !important;
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+
+    color: $nx-body;
+}
+
+.nx-work-card__link {
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    width: fit-content;
+
+    margin-top: 0;
+
+    opacity: 1;
+    visibility: visible;
+
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    color: $nx-dark;
+    text-decoration: none;
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.nx-work-cta {
+    padding: 5px 0;
+}
+
+.nx-work-cta .nx-cta-card {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    padding-right: 32px;
+    padding-left: 32px;
+    border-radius: 10px;
+    background: #102A4C;
+    color: $nx-primary;
+}
+
+.nx-work-cta .nx-btn-light:hover {
+    background: $nx-white;
+    color: $nx-primary;
+    border-color: $nx-white;
+    box-shadow: none;
+    transform: none;
+}
+
+.nx-work-cta .nx-btn-light:hover span {
+    color: $nx-primary;
+    transform: none;
+}
+
+.nx-work-cta .nx-cta-card__content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.nx-work-cta .nx-cta-card__eyebrow {
+    margin-bottom: 12px;
+    color: $nx-primary-light;
+}
+
+.nx-work-cta .nx-cta-card h2 {
+    margin: 0;
+    color: $nx-white;
+}
+
+.nx-work-cta {
+    .nx-cta-card {
+        h2 {
+            span {
+                color: $nx-primary;
+            }
+        }
+    }
+}
+
+.nx-work-cta .nx-cta-card p {
+    margin: 4px 0 0;
+    color: rgba($nx-white, 0.8);
+}
+
+.nx-work-cta .nx-cta-card .nx-actions {
+    margin-top: 28px;
+}
+
+.nx-work-cta .nx-cta-card::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -140px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba($nx-white, 0.06);
+    pointer-events: none;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+
+/* Large Desktop */
+
+@media (max-width: 1199.98px) {
+
+    .nx-work-hero {
+
+        &__content {
+            padding-right: 40px;
+        }
+
+        &__media {
+            min-height: 520px;
+        }
+    }
+
+
+    .nx-work-card__media {
+        height: 220px;
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+
+    .nx-work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nx-work-hero {
+
+        &__content {
+            padding: 30px 0 40px;
+        }
+
+        h1 {
+            
+            white-space: nowrap;
+            
+            font-size: 36px;
+            line-height: 1.08;
+            letter-spacing: -0.5px;
+            max-width: 100%;
+            
+            span {
+                color: $nx-primary;
+                display: inline;
+            }
+        }
+
+        p {
+            width: 100%;
+            max-width: none;
+            font-size: 21px;
+            line-height: 1.4;
+        }
+
+        &__media {
+            width: 100%;
+            height: 300px;
+            min-height: 0;
+            margin: 0;
+            overflow: hidden;
+
+            clip-path: none;
+            border-radius: $nx-radius-lg;
+
+            transform: translateY(-20px);
+        
+        &::before {
+            display: none;
+        }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            
+            }
+        }
+    }
+
+    .nx-work-projects {
+
+        padding-top: 20px;
+        margin-bottom: -20px;
+
+        .nx-section-heading {
+            margin-bottom: 20px;
+        }
+    }
+
+    .nx-work-filter {
+        margin-bottom: 24px;
+    }
+
+    
+}
+
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+    .nx-work-hero {
+
+        &__content {
+            padding: 24px 0 40px;
+        }
+
+        h1 {
+            font-size: 34px;
+            white-space: normal;
+        }
+
+        h1 span {
+            display: inline;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .nx-actions {
+            flex-direction: column;
+            align-items: stretch;
+
+            .nx-btn {
+                width: 100%;
+            }
+        }
+
+        &__stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px 0;
+            margin-top: 34px;
+        }
+
+        &__stat {
+            
+            min-width: 0;
+            padding-right: 18px;
+            margin-right: 18px;
+
+            &:nth-child(2) {
+                padding-right: 18px;
+                margin-right: 18px;
+                border-right: 0;
+            }
+
+            &:last-child {
+                grid-column: auto;
+                min-width: 0;
+                padding-right: 0;
+                margin-right: 0;
+                border-right: 0;
+
+            }
+
+        }
+
+    
+    }
+
+    .nx-work-projects {
+
+        .nx-section-heading {
+            margin-bottom: 28px;
+        }
+    }
+
+    .nx-work-filter {
+        justify-content: flex-start;
+
+        gap: 8px;
+
+        margin-bottom: 30px;
+    }
+
+    .nx-work-filter__btn {
+        min-height: 38px;
+        padding: 8px 14px;
+
+        font-size: 0.8rem;
+    }
+
+    .nx-work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nx-work-card__media {
+        height: 230px;
+    }
+
+    .nx-work-card__content {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .nx-work-cta {
+        padding-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .nx-work-cta .nx-eyebrow {
+        transform: translateY(-12px);
+    }
+
+    .nx-work-cta .nx-cta-card h2 {
+        margin-bottom: 18px;
+    }
+
+    .nx-work-cta .nx-cta-card {
+        padding: 40px 24px;
+        border-radius: 14px;
+    }
+
+    .nx-work-cta .nx-cta-card h2 {
+        font-size: 2rem;
+    }
+
+}
+

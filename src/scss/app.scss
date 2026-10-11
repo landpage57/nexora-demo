@@ -1,0 +1,47 @@
+// ========================================
+// Nexora — Main SCSS Entry
+// ========================================
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Nexora abstracts
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// Nexora base
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+// Nexora components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/badges";
+@import "components/breadcrumb";
+@import "components/accordion";
+@import "components/pagination";
+@import "components/cta";
+@import "components/alerts";
+@import "components/tabs";
+@import "components/modal";
+@import "components/tooltip";
+@import "components/dropdown";
+@import "components/progress";
+
+// Nexora layout
+@import "layout/header";
+@import "layout/navbar";
+@import "layout/sections";
+@import "layout/hero";
+@import "layout/footer";
+
+// Nexora pages
+@import "pages/about";
+@import "pages/services";
+@import "pages/work";
+@import "pages/pricing";
+@import "pages/faq";
+

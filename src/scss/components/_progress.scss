@@ -1,0 +1,34 @@
+// ========================================
+// Nexora — Progress
+// ========================================
+
+.nx-progress {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    background-color: $nx-surface;
+    border-radius: $nx-radius-badge;
+}
+
+.nx-progress-bar {
+    height: 100%;
+
+    background-color: $nx-primary;
+    border-radius: inherit;
+
+    transition: width $nx-transition-fast;
+}
+
+.nx-progress-success {
+    background-color: $nx-success;
+}
+
+.nx-progress-warning {
+    background-color: $nx-warning;
+}
+
+.nx-progress-danger {
+    background-color: $nx-danger;
+}

@@ -1,0 +1,163 @@
+// ========================================
+// Nexora — Navbar
+// ========================================
+
+.nx-header {
+    background: $nx-white;
+    border-bottom: 1px solid $nx-border;
+}
+
+.nx-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: $nx-space-6;
+}
+
+.nx-navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    color: $nx-dark;
+    font-size: 24px;
+    font-weight: $nx-font-weight-bold;
+    letter-spacing: -0.04em;
+    
+    
+
+    &:hover {
+        color: $nx-dark;
+    }
+}
+ 
+.nx-navbar-brand__letter {
+    color: #2563eb;
+
+}
+
+.nx-navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: $nx-space-7;
+    margin-left: auto;
+}
+
+.nx-navbar-nav a {
+    color: $nx-body;
+    font-size: 14px;
+    font-weight: $nx-font-weight-medium;
+    transition: $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary;
+    }
+}
+
+.nx-navbar-action {
+    margin-left: $nx-space-5;
+}
+
+
+/* =========================
+    Navbar - Mobile
+========================= */
+.nx-navbar-toggle {
+    display: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: $nx-dark;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.nx-navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: $nx-space-6;
+}
+
+@media (max-width: 767.98px) {
+
+    .nx-navbar {
+        position: relative;
+    }
+
+    /* Move the mobile navbar brand slightly to the right */
+    .nx-navbar-brand {
+        margin-left: 8px;
+    }
+
+    .nx-navbar-toggle {
+        position: relative;
+        z-index: 1001;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: $nx-dark;
+    }
+
+    .nx-navbar-menu {
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        left: auto;
+
+        width: 130px;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 14px 16px;
+
+        background: $nx-white;
+        border: 1px solid $nx-border;
+        border-radius: $nx-radius-lg;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+
+        z-index: 1000;
+    }
+
+    .nx-navbar-menu.is-open {
+        display: flex;
+    }
+
+    .nx-navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nx-navbar-nav a {
+        display: block;
+        width: 100%;
+        padding: 2px 2px;
+        
+        text-align: center;
+    }
+
+    .nx-navbar-action {
+        width: 100%;
+        margin-top: -20px;
+        padding-left: 0;
+    }
+
+    .nx-navbar-action .nx-btn {
+        width: 95px;
+        transform: translateX(-20px);
+    }
+    
+}
+

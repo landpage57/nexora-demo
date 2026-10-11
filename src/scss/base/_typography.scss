@@ -1,0 +1,39 @@
+// ========================================
+// Nexora — Typography
+// ========================================
+
+body {
+    font-family: $nx-font-family-base;
+    font-size: $nx-font-size-base;
+    font-weight: $nx-font-weight-regular;
+    line-height: $nx-line-height-base;
+    color: $nx-body;
+    background-color: $nx-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: $nx-space-4;
+    color: $nx-dark;
+    font-weight: $nx-font-weight-bold;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: $nx-space-4;
+}
+
+a {
+    color: $nx-primary;
+    transition: color $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary-dark;
+    }
+}

@@ -1,0 +1,79 @@
+// ========================================
+// Nexora — Pagination
+// ========================================
+
+.nx-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $nx-space-1;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nx-pagination-item {
+    display: flex;
+}
+
+.nx-pagination-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 28px;
+    height: 26px;
+
+    padding: 0 6px;
+
+    color: $nx-body;
+    background-color: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-md;
+
+    font-size: 14px;
+    font-weight: $nx-font-weight-medium;
+    line-height: 1;
+
+    transition:
+        color $nx-transition-fast,
+        background-color $nx-transition-fast,
+        border-color $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary;
+        border-color: $nx-primary;
+        background-color: $nx-primary-light;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.2);
+        outline-offset: 2px;
+    }
+}
+
+.nx-pagination-item.active {
+    .nx-pagination-link {
+        color: $nx-white;
+        background-color: $nx-primary;
+        border-color: $nx-primary;
+    }
+}
+
+.nx-pagination-item.disabled {
+    .nx-pagination-link {
+        color: $nx-muted;
+        background-color: $nx-surface;
+        border-color: $nx-border;
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+}
+
+.nx-pagination-link svg {
+    width: 15px;
+    height: 15px;
+}

@@ -1,0 +1,130 @@
+// ========================================
+// Nexora — Cards
+// ========================================
+
+.nx-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    padding: $nx-space-6;
+
+    background-color: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+
+    transition:
+        border-color $nx-transition-base,
+        box-shadow $nx-transition-base,
+        transform $nx-transition-base;
+}
+
+
+// ----------------------------------------
+// Card Hover
+// ----------------------------------------
+
+.nx-card-hover {
+    &:hover {
+        border-color: rgba(37, 99, 235, 0.25);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        transform: translateY(-2px);
+    }
+}
+
+
+// ----------------------------------------
+// Card Header
+// ----------------------------------------
+
+.nx-card-header {
+    margin-bottom: $nx-space-4;
+}
+
+.nx-card-title {
+    margin-bottom: $nx-space-2;
+
+    color: $nx-dark;
+    font-size: 20px;
+    font-weight: $nx-font-weight-semibold;
+    line-height: 1.35;
+}
+
+.nx-card-description {
+    margin-bottom: 0;
+
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+// ----------------------------------------
+// Card Body
+// ----------------------------------------
+
+.nx-card-body {
+    flex: 1;
+}
+
+
+// ----------------------------------------
+// Card Footer
+// ----------------------------------------
+
+.nx-card-footer {
+    margin-top: $nx-space-4;
+    padding-top: $nx-space-4;
+
+    border-top: 1px solid $nx-border;
+}
+
+
+// ----------------------------------------
+// Card Icon
+// ----------------------------------------
+
+.nx-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: $nx-space-4;
+
+    background-color: $nx-primary-light;
+    border-radius: $nx-radius-md;
+
+    color: $nx-primary;
+    font-size: 20px;
+}
+
+
+// ----------------------------------------
+// Card Image
+// ----------------------------------------
+
+.nx-card-image {
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: $nx-radius-md;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        transition: transform $nx-transition-slow;
+    }
+}
+
+.nx-card-hover:hover {
+    .nx-card-image img {
+        transform: scale(1.02);
+    }
+}

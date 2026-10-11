@@ -1,0 +1,96 @@
+// ========================================
+// Nexora — Accordion
+// ========================================
+
+.nx-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: $nx-space-3;
+}
+
+.nx-accordion-item {
+    overflow: hidden;
+
+    background-color: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-lg;
+}
+
+.nx-accordion-header {
+    margin: 0;
+}
+
+.nx-accordion-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: $nx-space-3 $nx-space-6;
+
+    color: $nx-dark;
+    background-color: transparent;
+    border: 0;
+
+    font-size: 16px;
+    font-weight: $nx-font-weight-semibold;
+    line-height: 1.5;
+    text-align: left;
+
+    cursor: pointer;
+    transition:
+        color $nx-transition-fast,
+        background-color $nx-transition-fast;
+
+    &:hover {
+        color: $nx-primary;
+        background-color: $nx-primary-light;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.2);
+        outline-offset: -3px;
+    }
+}
+
+.nx-accordion-icon {
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+
+    margin-left: $nx-space-4;
+
+    color: $nx-muted;
+
+    transition:
+        color $nx-transition-fast,
+        transform $nx-transition-fast;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.nx-accordion-button[aria-expanded="true"] {
+    color: $nx-primary;
+
+    .nx-accordion-icon {
+        color: $nx-primary;
+        transform: rotate(180deg);
+    }
+}
+
+.nx-accordion-content {
+    padding: 0 $nx-space-6 $nx-space-5;
+
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.nx-accordion-content p {
+    margin: 0;
+}

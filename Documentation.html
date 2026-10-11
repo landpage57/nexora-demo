@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexora HTML Website Theme Documentation">
+    <title>Nexora Documentation</title>
+
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --dark: #0F172A;
+            --dark-secondary: #334155;
+            --body: #475569;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --surface: #F8FAFC;
+            --white: #FFFFFF;
+            --sidebar-width: 270px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 30px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--body);
+            background: var(--white);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .docs-sidebar {
+            position: fixed;
+            inset: 0 auto 0 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            width: var(--sidebar-width);
+            padding: 28px 20px;
+            overflow-y: auto;
+            background: var(--white);
+            border-right: 1px solid var(--border);
+        }
+
+        .docs-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            color: var(--dark);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .docs-brand-mark {
+            display: grid;
+            width: 38px;
+            height: 38px;
+            place-items: center;
+            color: var(--white);
+            background: var(--primary);
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .docs-version {
+            display: inline-block;
+            margin-left: 5px;
+            padding: 2px 7px;
+            color: var(--muted);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+
+        .docs-nav-label {
+            margin: 20px 0 8px;
+            color: var(--muted);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .docs-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .docs-nav a {
+            display: block;
+            padding: 8px 12px;
+            color: var(--body);
+            border-radius: 6px;
+            font-size: 13px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .docs-nav a:hover,
+        .docs-nav a.active {
+            color: var(--primary);
+            background: #EFF6FF;
+        }
+
+        .docs-sidebar-footer {
+            margin-top: auto;
+            padding-top: 24px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .docs-main {
+            max-width: 1100px;
+            min-height: 100vh;
+            margin-left: var(--sidebar-width);
+            padding: 54px 7%;
+        }
+
+        .docs-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 55px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .docs-breadcrumb {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .docs-breadcrumb strong {
+            color: var(--dark);
+        }
+
+        .docs-mobile-toggle {
+            display: none;
+            padding: 8px 12px;
+            color: var(--dark);
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .docs-hero {
+            margin-bottom: 65px;
+        }
+
+        .docs-eyebrow {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        h1 {
+            max-width: 700px;
+            margin-bottom: 22px;
+            font-size: clamp(36px, 5vw, 54px);
+            letter-spacing: -2px;
+        }
+
+        h1 span {
+            color: var(--primary);
+        }
+
+        .docs-hero p {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .docs-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 26px;
+        }
+
+        .docs-tag {
+            padding: 5px 10px;
+            color: var(--dark-secondary);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .docs-section {
+            margin-bottom: 70px;
+            scroll-margin-top: 30px;
+        }
+
+        .docs-section h2 {
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
+            font-size: 28px;
+            letter-spacing: -0.7px;
+        }
+
+        .docs-section h3 {
+            margin: 28px 0 10px;
+            font-size: 18px;
+        }
+
+        .docs-section p {
+            margin-bottom: 16px;
+        }
+
+        .docs-section ul,
+        .docs-section ol {
+            margin: 12px 0 20px 22px;
+        }
+
+        .docs-section li {
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+
+        .docs-note {
+            margin: 22px 0;
+            padding: 16px 18px;
+            background: #EFF6FF;
+            border-left: 3px solid var(--primary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .docs-note strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--dark);
+        }
+
+        .docs-warning {
+            background: #FFFBEB;
+            border-left-color: #D97706;
+        }
+
+        .docs-code {
+            position: relative;
+            margin: 16px 0 22px;
+            padding: 18px 20px;
+            overflow-x: auto;
+            color: #E2E8F0;
+            background: #0F172A;
+            border-radius: 8px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13px;
+            line-height: 1.9;
+            white-space: pre;
+        }
+
+        .docs-code-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #94A3B8;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .docs-table-wrap {
+            margin: 20px 0;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .docs-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .docs-table th,
+        .docs-table td {
+            padding: 13px 15px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            font-size: 13px;
+        }
+
+        .docs-table th {
+            color: var(--dark);
+            background: var(--surface);
+            font-weight: 700;
+        }
+
+        .docs-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .docs-table code,
+        .docs-inline-code {
+            padding: 2px 5px;
+            color: var(--primary-dark);
+            background: #EFF6FF;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 12px;
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 22px 0;
+        }
+
+        .docs-card {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .docs-card h3 {
+            margin: 0 0 8px;
+            font-size: 15px;
+        }
+
+        .docs-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .docs-footer {
+            margin-top: 80px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .docs-sidebar {
+                width: 240px;
+            }
+
+            .docs-main {
+                margin-left: 240px;
+                padding: 40px 5%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .docs-sidebar {
+                width: min(290px, 85vw);
+                transform: translateX(-100%);
+                transition: transform 0.25s ease;
+                box-shadow: none;
+            }
+
+            .docs-sidebar.is-open {
+                transform: translateX(0);
+                box-shadow: 10px 0 40px rgba(15, 23, 42, 0.12);
+            }
+
+            .docs-main {
+                margin-left: 0;
+                padding: 25px 20px;
+            }
+
+            .docs-topbar {
+                margin-bottom: 40px;
+            }
+
+            .docs-mobile-toggle {
+                display: inline-block;
+            }
+
+            .docs-hero {
+                margin-bottom: 45px;
+            }
+
+            h1 {
+                font-size: 38px;
+                letter-spacing: -1.5px;
+            }
+
+            .docs-section {
+                margin-bottom: 50px;
+            }
+
+            .docs-section h2 {
+                font-size: 24px;
+            }
+
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            .docs-sidebar,
+            .docs-mobile-toggle {
+                display: none !important;
+            }
+
+            .docs-main {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .docs-section {
+                break-inside: avoid;
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar" id="docsSidebar">
+
+        <a href="#top" class="docs-brand">
+            <span class="docs-brand-mark">N</span>
+            Nexora
+            <span class="docs-version">HTML</span>
+        </a>
+
+        <span class="docs-nav-label">Getting Started</span>
+
+        <nav class="docs-nav" aria-label="Documentation navigation">
+            <a href="#introduction">Introduction</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#installation">Installation</a>
+            <a href="#structure">Project Structure</a>
+        </nav>
+
+        <span class="docs-nav-label">Customization</span>
+
+        <nav class="docs-nav" aria-label="Customization navigation">
+            <a href="#pages">Pages Overview</a>
+            <a href="#colors">Colors & Typography</a>
+            <a href="#content">Content & Images</a>
+            <a href="#icons">Icons & Components</a>
+            <a href="#responsive">Responsive Layout</a>
+        </nav>
+
+        <span class="docs-nav-label">Support</span>
+
+        <nav class="docs-nav" aria-label="Support navigation">
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#credits">Credits</a>
+        </nav>
+
+        <div class="docs-sidebar-footer">
+            Nexora HTML Website Theme<br>
+            Buyer Documentation
+        </div>
+
+    </aside>
+
+
+    <!-- Main Documentation -->
+    <main class="docs-main" id="top">
+
+        <div class="docs-topbar">
+            <div class="docs-breadcrumb">
+                Documentation / <strong>Getting Started</strong>
+            </div>
+
+            <button
+                class="docs-mobile-toggle"
+                id="docsMenuToggle"
+                type="button"
+                aria-controls="docsSidebar"
+                aria-expanded="false"
+            >
+                ☰ Menu
+            </button>
+        </div>
+
+
+        <!-- Hero -->
+        <header class="docs-hero">
+            <span class="docs-eyebrow">Documentation</span>
+
+            <h1>
+                Welcome to <span>Nexora.</span>
+            </h1>
+
+            <p>
+                Thank you for choosing Nexora. This documentation will help
+                you install, understand, and customize your HTML website theme
+                for your own projects.
+            </p>
+
+            <div class="docs-hero-meta">
+                <span class="docs-tag">HTML5</span>
+                <span class="docs-tag">Bootstrap 5</span>
+                <span class="docs-tag">SCSS</span>
+                <span class="docs-tag">Vanilla JavaScript</span>
+                <span class="docs-tag">Vite</span>
+            </div>
+        </header>
+
+
+        <!-- Introduction -->
+        <section class="docs-section" id="introduction">
+            <h2>1. Introduction</h2>
+
+            <p>
+                Nexora is a modern HTML website theme designed for business
+                websites, agencies, creative studios, and service providers.
+                Its source files are organized to help developers customize
+                layouts, styles, and content.
+            </p>
+
+            <h3>What is included?</h3>
+
+            <ul>
+                <li>HTML page templates.</li>
+                <li>SCSS stylesheets for styling customization.</li>
+                <li>JavaScript files for interactive elements.</li>
+                <li>Image assets used by the website.</li>
+                <li>Bootstrap-based layout and responsive utilities.</li>
+                <li>This documentation file.</li>
+            </ul>
+
+            <div class="docs-note">
+                <strong>Important</strong>
+                Nexora is an HTML theme, not a WordPress theme.
+                It does not include a WordPress installation, PHP backend,
+                database, or content management dashboard.
+            </div>
+        </section>
+
+
+        <!-- Requirements -->
+        <section class="docs-section" id="requirements">
+            <h2>2. Requirements</h2>
+
+            <p>
+                To edit the source files and run the development server,
+                you will need the following software.
+            </p>
+
+            <div class="docs-table-wrap">
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Software</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Visual Studio Code</td>
+                            <td>Edit HTML, SCSS, JavaScript, and other files.</td>
+                        </tr>
+                        <tr>
+                            <td>Node.js and npm</td>
+                            <td>Install dependencies and run Vite commands.</td>
+                        </tr>
+                        <tr>
+                            <td>Modern web browser</td>
+                            <td>Preview and test your website.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                If you only want to view a previously built website, you may
+                be able to open its HTML files directly. For development,
+                use the Vite workflow described below.
+            </p>
+        </section>
+
+
+        <!-- Installation -->
+        <section class="docs-section" id="installation">
+            <h2>3. Installation</h2>
+
+            <h3>Step 1 — Extract the package</h3>
+
+            <p>
+                Extract the Nexora ZIP package into a folder on your computer.
+                Open the extracted project folder in Visual Studio Code.
+            </p>
+
+            <h3>Step 2 — Install Node.js</h3>
+
+            <p>
+                If Node.js is not already installed, download and install
+                the current LTS version from the official website.
+            </p>
+
+            <p>
+                <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
+                    Visit the official Node.js website →
+                </a>
+            </p>
+
+            <h3>Step 3 — Open the terminal</h3>
+
+            <p>
+                In Visual Studio Code, open the project folder and select
+                <strong>Terminal → New Terminal</strong>.
+            </p>
+
+            <h3>Step 4 — Install dependencies</h3>
+
+            <div class="docs-code"><span class="docs-code-label">Terminal</span>npm install</div>
+
+            <p>
+                Run this command from the folder containing the project's
+                <span class="docs-inline-code">package.json</span> file.
+            </p>
+
+            <h3>Step 5 — Start the development server</h3>
+
+            <div class="docs-code"><span class="docs-code-label">Terminal</span>npm run dev</div>
+
+            <p>
+                Open the local URL displayed in your terminal. Vite commonly
+                uses <span class="docs-inline-code">http://localhost:5173</span>,
+                but the actual URL may differ.
+            </p>
+
+            <h3>Step 6 — Build for production</h3>
+
+            <div class="docs-code"><span class="docs-code-label">Terminal</span>npm run build</div>
+
+            <p>
+                If the project has a configured build script, Vite generates
+                production files in the configured output directory, commonly
+                named <span class="docs-inline-code">dist</span>.
+            </p>
+
+            <div class="docs-note docs-warning">
+                <strong>Check your package.json</strong>
+                The available commands depend on the scripts included in the
+                delivered project. Confirm that the <span class="docs-inline-code">dev</span>
+                and <span class="docs-inline-code">build</span> scripts exist
+                before running them.
+            </div>
+        </section>
+
+
+        <!-- Structure -->
+        <section class="docs-section" id="structure">
+            <h2>4. Project Structure</h2>
+
+            <p>
+                The following is an example of the expected organization.
+                Your delivered ZIP should match the actual source files.
+            </p>
+
+            <div class="docs-code">nexora/
+├── index.html
+├── about.html
+├── services.html
+├── work.html
+├── pricing.html
+├── faq.html
+├── Documentation.html
+├── package.json
+├── vite.config.js
+├── public/
+│   └── assets/
+│       └── images/
+└── src/
+    ├── js/
+    │   └── main.js
+    └── scss/
+        ├── app.scss
+        ├── base/
+        ├── components/
+        ├── layout/
+        └── pages/</div>
+
+            <div class="docs-table-wrap">
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>File / Folder</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>*.html</code></td>
+                            <td>Website page markup.</td>
+                        </tr>
+                        <tr>
+                            <td><code>src/scss/</code></td>
+                            <td>Stylesheets and SCSS partials.</td>
+                        </tr>
+                        <tr>
+                            <td><code>src/scss/app.scss</code></td>
+                            <td>Main SCSS entry point, if used by the project.</td>
+                        </tr>
+                        <tr>
+                            <td><code>src/js/</code></td>
+                            <td>JavaScript behavior and interactions.</td>
+                        </tr>
+                        <tr>
+                            <td><code>public/assets/</code></td>
+                            <td>Public images and other static assets, if organized this way.</td>
+                        </tr>
+                        <tr>
+                            <td><code>package.json</code></td>
+                            <td>Project metadata, dependencies, and npm scripts.</td>
+                        </tr>
+                        <tr>
+                            <td><code>vite.config.js</code></td>
+                            <td>Vite configuration, if included.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="docs-note">
+                <strong>Keep the original folder structure</strong>
+                When moving or renaming files, update their references in the
+                relevant HTML, SCSS, and JavaScript files.
+            </div>
+        </section>
+
+
+        <!-- Pages -->
+        <section class="docs-section" id="pages">
+            <h2>5. Pages Overview</h2>
+
+            <p>
+                Nexora includes the following website pages. Confirm that
+                every listed page is included in your purchased package.
+            </p>
+
+            <div class="docs-grid">
+                <div class="docs-card">
+                    <h3>01. Home</h3>
+                    <p>Main landing page for presenting the business, services, work, and calls to action.</p>
+                </div>
+
+                <div class="docs-card">
+                    <h3>02. Services</h3>
+                    <p>Introduce the company, its story, values, and approach.</p>
+                </div>
+
+                <div class="docs-card">
+                    <h3>03. About</h3>
+                    <p>Present available services and explain their benefits.</p>
+                </div>
+
+                <div class="docs-card">
+                    <h3>04. Work</h3>
+                    <p>Showcase selected projects and portfolio work.</p>
+                </div>
+
+                <div class="docs-card">
+                    <h3>05. Pricing</h3>
+                    <p>Display service packages, pricing details, and FAQs if included.</p>
+                </div>
+
+                <div class="docs-card">
+                    <h3>06. FAQ</h3>
+                    <p>Answer common questions and guide visitors to support.</p>
+                </div>
+            </div>
+
+            <p>
+                Navigation links, buttons, forms, and external destinations
+                should be reviewed and updated to match your own business
+                before publishing the website.
+            </p>
+        </section>
+
+
+        <!-- Colors -->
+        <section class="docs-section" id="colors">
+            <h2>6. Colors & Typography</h2>
+
+            <p>
+                Nexora uses a centralized SCSS approach for consistent styling.
+                When available, edit the existing design tokens instead of
+                creating duplicate global rules.
+            </p>
+
+            <h3>Brand color reference</h3>
+
+            <div class="docs-table-wrap">
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Token</th>
+                            <th>Example value</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>$nx-primary</code></td>
+                            <td><code>#2563EB</code></td>
+                            <td>Primary buttons, links, and accents.</td>
+                        </tr>
+                        <tr>
+                            <td><code>$nx-dark</code></td>
+                            <td><code>#0F172A</code></td>
+                            <td>Headings and dark elements.</td>
+                        </tr>
+                        <tr>
+                            <td><code>$nx-body</code></td>
+                            <td><code>#475569</code></td>
+                            <td>Body text.</td>
+                        </tr>
+                        <tr>
+                            <td><code>$nx-muted</code></td>
+                            <td><code>#64748B</code></td>
+                            <td>Secondary text.</td>
+                        </tr>
+                        <tr>
+                            <td><code>$nx-border</code></td>
+                            <td><code>#E2E8F0</code></td>
+                            <td>Borders and dividers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                These values are reference tokens. Their exact variable
+                definitions and file locations must match the delivered
+                source code.
+            </p>
+
+            <h3>How to customize colors</h3>
+
+            <ol>
+                <li>Open the SCSS variables file used by the project.</li>
+                <li>Locate the relevant design token.</li>
+                <li>Change its value to your preferred brand color.</li>
+                <li>Restart or refresh the development preview if necessary.</li>
+                <li>Test all pages and responsive layouts.</li>
+            </ol>
+
+            <h3>Typography</h3>
+
+            <p>
+                Typography may be controlled through SCSS variables or global
+                styles. Update the font family, size, weight, and line height
+                in the appropriate source file. If the font is loaded from an
+                external service, ensure that the font URL remains valid.
+            </p>
+        </section>
+
+
+        <!-- Content and Images -->
+        <section class="docs-section" id="content">
+            <h2>7. Content & Images</h2>
+
+            <h3>Editing text</h3>
+
+            <p>
+                Open the relevant HTML page in your code editor. Replace
+                headings, paragraphs, labels, contact information, and
+                button text while preserving the existing HTML structure.
+            </p>
+
+            <h3>Replacing images</h3>
+
+            <ol>
+                <li>Find the image reference in the relevant HTML or SCSS file.</li>
+                <li>Place your replacement image in the appropriate assets folder.</li>
+                <li>Update the file path if the filename or location changes.</li>
+                <li>Check the image in desktop and mobile layouts.</li>
+            </ol>
+
+            <div class="docs-code"><span class="docs-code-label">HTML example</span>&lt;img
+    src="/assets/images/example.jpg"
+    alt="Describe the image"
+&gt;</div>
+
+            <p>
+                This snippet is an example only. Keep the actual image path
+                consistent with the folder structure and Vite configuration
+                in your package.
+            </p>
+
+            <h3>Logo and links</h3>
+
+            <p>
+                Replace the logo in the shared navigation and footer where
+                applicable. Update internal page links, email addresses,
+                social media URLs, and call-to-action destinations before
+                publishing.
+            </p>
+        </section>
+
+
+        <!-- Icons and Components -->
+        <section class="docs-section" id="icons">
+            <h2>8. Icons & Components</h2>
+
+            <p>
+                The theme uses Bootstrap-based styling and may include
+                Bootstrap Icons for interface elements. Keep the icon
+                dependency installed if your pages reference its CSS classes.
+            </p>
+
+            <p>
+                When replacing icons, use the icon library included in the
+                project and confirm that the relevant CSS or font files
+                load correctly.
+            </p>
+
+            <h3>Interactive components</h3>
+
+            <ul>
+                <li>Navigation menus and mobile menu controls.</li>
+                <li>FAQ accordions or expandable content.</li>
+                <li>Buttons and internal page navigation.</li>
+                <li>Other JavaScript interactions included in the theme.</li>
+            </ul>
+
+            <p>
+                The exact behavior depends on the components implemented
+                in the delivered source. Test interactive elements after
+                making changes to HTML or JavaScript.
+            </p>
+        </section>
+
+
+        <!-- Responsive -->
+        <section class="docs-section" id="responsive">
+            <h2>9. Responsive Layout</h2>
+
+            <p>
+                Nexora is designed to adapt to different screen sizes.
+                Always test your changes on desktop, tablet, and mobile
+                devices before deploying the website.
+            </p>
+
+            <div class="docs-table-wrap">
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Viewport</th>
+                            <th>Recommended check</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>320 × 568</td>
+                            <td>Small mobile screens and horizontal overflow.</td>
+                        </tr>
+                        <tr>
+                            <td>375 × 812</td>
+                            <td>Common mobile layout and text wrapping.</td>
+                        </tr>
+                        <tr>
+                            <td>768 × 1024</td>
+                            <td>Tablet spacing, columns, and navigation.</td>
+                        </tr>
+                        <tr>
+                            <td>1440 × 900</td>
+                            <td>Desktop content width and section alignment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Responsive customization tips</h3>
+
+            <ul>
+                <li>Use the existing media queries where possible.</li>
+                <li>Avoid fixed widths that cause horizontal scrolling.</li>
+                <li>Check heading wrapping and image cropping.</li>
+                <li>Verify button spacing and navigation behavior.</li>
+                <li>Retest shared components after changing global styles.</li>
+            </ul>
+        </section>
+
+
+        <!-- Troubleshooting -->
+        <section class="docs-section" id="troubleshooting">
+            <h2>10. Troubleshooting</h2>
+
+            <div class="docs-table-wrap">
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Possible solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dependencies fail to install</td>
+                            <td>Check Node.js and npm versions, internet connectivity, and the terminal's current folder.</td>
+                        </tr>
+                        <tr>
+                            <td>Development server does not start</td>
+                            <td>Check <code>package.json</code>, the available scripts, and terminal error messages.</td>
+                        </tr>
+                        <tr>
+                            <td>Images are missing</td>
+                            <td>Verify filenames, capitalization, asset locations, and image paths.</td>
+                        </tr>
+                        <tr>
+                            <td>Styles do not update</td>
+                            <td>Check SCSS imports, stylesheet loading, build errors, and browser caching.</td>
+                        </tr>
+                        <tr>
+                            <td>Icons do not appear</td>
+                            <td>Check whether the icon package is installed and its CSS is imported.</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile layout overflows</td>
+                            <td>Inspect fixed widths, long text, image dimensions, and media queries.</td>
+                        </tr>
+                        <tr>
+                            <td>Page links do not work</td>
+                            <td>Verify the destination filename and link path.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Before requesting support</h3>
+
+            <p>
+                Include the page name, the steps that reproduce the issue,
+                the browser you are using, and any relevant error messages.
+                This information makes troubleshooting easier.
+            </p>
+        </section>
+
+
+        <!-- Credits -->
+        <section class="docs-section" id="credits">
+            <h2>11. Credits & Resources</h2>
+
+            <p>
+                The following resources are relevant to the technologies
+                used by this theme. Check your actual dependency list and
+                asset licenses before redistribution or commercial use.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                        Bootstrap
+                    </a>
+                    — responsive layout and UI utilities.
+                </li>
+                <li>
+                    <a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                        Bootstrap Icons
+                    </a>
+                    — icon library, when included in the project.
+                </li>
+                <li>
+                    <a href="https://vite.dev/" target="_blank" rel="noopener noreferrer">
+                        Vite
+                    </a>
+                    — development server and build tooling.
+                </li>
+                <li>
+                    <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
+                        Sass
+                    </a>
+                    — stylesheet preprocessor.
+                </li>
+                <li>
+                    <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
+                        Node.js
+                    </a>
+                    — JavaScript runtime used for development tooling.
+                </li>
+            </ul>
+
+            <div class="docs-note docs-warning">
+                <strong>Third-party assets</strong>
+                Before releasing the theme for sale, list the actual fonts,
+                images, icons, and other third-party assets used in the
+                package. Confirm that their licenses permit the intended
+                commercial distribution.
+            </div>
+        </section>
+
+
+        <footer class="docs-footer">
+            <p>
+                <strong>Nexora HTML Website Theme</strong>
+            </p>
+            <p>
+                Thank you for choosing Nexora. We hope it helps you build
+                a professional website for your business.
+            </p>
+            <p style="margin-top: 12px;">
+                © Nexora. All rights reserved.
+            </p>
+        </footer>
+
+    </main>
+
+
+    <script>
+        const docsSidebar = document.getElementById("docsSidebar");
+        const docsMenuToggle = document.getElementById("docsMenuToggle");
+        const docsNavLinks = document.querySelectorAll(".docs-nav a");
+        const docsSections = document.querySelectorAll(".docs-section");
+
+        // Toggle sidebar on smaller screens.
+        docsMenuToggle.addEventListener("click", () => {
+            const isOpen = docsSidebar.classList.toggle("is-open");
+
+            docsMenuToggle.setAttribute("aria-expanded", String(isOpen));
+            docsMenuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+        });
+
+        // Close mobile navigation after selecting a section.
+        docsNavLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                docsSidebar.classList.remove("is-open");
+                docsMenuToggle.setAttribute("aria-expanded", "false");
+                docsMenuToggle.textContent = "☰ Menu";
+            });
+        });
+
+        // Highlight the navigation link for the current section.
+        if ("IntersectionObserver" in window) {
+            const sectionObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+
+                        const currentId = entry.target.id;
+
+                        docsNavLinks.forEach((link) => {
+                            const isActive =
+                                link.getAttribute("href") === "#" + currentId;
+
+                            link.classList.toggle("active", isActive);
+                        });
+                    });
+                },
+                {
+                    rootMargin: "-15% 0px -70% 0px"
+                }
+            );
+
+            docsSections.forEach((section) => {
+                sectionObserver.observe(section);
+            });
+        }
+    </script>
+
+</body>
+</html>

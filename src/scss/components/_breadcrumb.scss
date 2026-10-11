@@ -1,0 +1,44 @@
+// ========================================
+// Nexora — Breadcrumb
+// ========================================
+
+.nx-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    color: $nx-muted;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.nx-breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &:not(:last-child)::after {
+        content: "/";
+        color: $nx-border;
+    }
+
+    a {
+        color: $nx-muted;
+        transition: color $nx-transition-fast;
+
+        &:hover {
+            color: $nx-primary;
+        }
+    }
+
+    &.active {
+        color: $nx-dark;
+        font-weight: $nx-font-weight-medium;
+    }
+}

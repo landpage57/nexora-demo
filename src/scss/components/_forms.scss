@@ -1,0 +1,93 @@
+// ========================================
+// Nexora — Forms
+// ========================================
+
+.nx-form-group {
+    margin-bottom: $nx-space-2;
+}
+
+.nx-form-label {
+    display: inline-block;
+    margin-bottom: $nx-space-2;
+
+    color: $nx-dark-secondary;
+    font-size: 14px;
+    font-weight: $nx-font-weight-semibold;
+    line-height: 1.4;
+}
+
+.nx-form-control {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 12px;
+
+    background-color: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-md;
+
+    color: $nx-dark;
+    font-size: 14px;
+    line-height: 1.5;
+
+    transition:
+        border-color $nx-transition-fast,
+        box-shadow $nx-transition-fast;
+
+    &::placeholder {
+        color: $nx-muted;
+    }
+
+    &:focus {
+        border-color: $nx-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    }
+}
+
+textarea.nx-form-control {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.nx-form-select {
+    appearance: none;
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 36px 7px 12px;
+
+    background-color: $nx-white;
+    border: 1px solid $nx-border;
+    border-radius: $nx-radius-md;
+
+    color: $nx-dark;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        border-color $nx-transition-fast,
+        box-shadow $nx-transition-fast;
+
+    &:focus {
+        border-color: $nx-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    }
+}
+
+.nx-form-help {
+    display: block;
+    margin-top: $nx-space-2;
+
+    color: $nx-muted;
+    font-size: 13px;
+}
+
+.nx-form-error {
+    display: block;
+    margin-top: $nx-space-2;
+
+    color: $nx-danger;
+    font-size: 13px;
+}

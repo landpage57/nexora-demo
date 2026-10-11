@@ -1,0 +1,29 @@
+// ========================================
+// Nexora — Tooltip
+// ========================================
+
+.nx-tooltip {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1080;
+
+    max-width: 200px;
+    padding: $nx-space-1 $nx-space-2;
+
+    color: $nx-white;
+    background-color: $nx-dark;
+    border-radius: $nx-radius-md;
+
+    font-size: 12px;
+    font-weight: $nx-font-weight-medium;
+    line-height: 1.4;
+    text-align: center;
+
+    pointer-events: none;
+    white-space: nowrap;
+
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}

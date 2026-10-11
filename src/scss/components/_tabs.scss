@@ -1,0 +1,89 @@
+// ========================================
+// Nexora — Tabs
+// ========================================
+
+.nx-tabs {
+    width: 100%;
+}
+
+.nx-tabs-nav {
+    display: flex;
+    align-items: center;
+    gap: $nx-space-6;
+
+    margin: 0;
+    padding: 0;
+
+    border-bottom: 1px solid $nx-border;
+
+    list-style: none;
+}
+
+.nx-tabs-item {
+    margin: 0;
+}
+
+.nx-tabs-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: $nx-space-2 0;
+
+    color: $nx-muted;
+    background: transparent;
+    border: 0;
+
+    font-size: 14px;
+    font-weight: $nx-font-weight-medium;
+    line-height: 1.5;
+
+    cursor: pointer;
+    transition: color $nx-transition-fast;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        height: 2px;
+
+        background-color: $nx-primary;
+
+        transform: scaleX(0);
+        transform-origin: center;
+
+        transition: transform $nx-transition-fast;
+    }
+
+    &:hover {
+        color: $nx-primary;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.2);
+        outline-offset: 4px;
+    }
+}
+
+.nx-tabs-link.active {
+    color: $nx-primary;
+
+    &::after {
+        transform: scaleX(1);
+    }
+}
+
+.nx-tabs-content {
+    padding-top: $nx-space-4;
+}
+
+.nx-tabs-pane {
+    color: $nx-body;
+    font-size: 14px;
+    line-height: 1.7;
+}

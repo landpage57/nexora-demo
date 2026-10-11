@@ -1,0 +1,889 @@
+// ========================================
+// NEXORA — SERVICES PAGE
+// ========================================
+
+// ----------------------------------------
+// SERVICES HERO
+// ----------------------------------------
+
+.services-hero {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        110deg,
+        $nx-primary-light 0%,
+        #f8fbff 48%,
+        #e7f1ff 100%
+    );
+}
+
+.services-hero-grid {
+    min-height: 410px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.services-hero-content {
+    padding: 26px 56px 72px 0;
+}    
+
+.services-hero-content {
+
+    h1 {
+        color: $nx-dark;
+
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+
+        margin: 16px 0;
+    }
+
+    span {
+        color: $nx-primary;
+    }
+
+    p {
+        max-width: 510px;
+
+        color: $nx-body;
+
+        font-size: 18px;
+        line-height: $nx-line-height-base;
+
+        margin: 0 0 24px;
+    }
+}
+
+.services-hero-actions {
+    display: flex;
+
+    gap: 14px;
+}
+
+.services-hero-visual {
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-visual-frame {
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: $nx-radius-xl;
+}
+
+.services-visual-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+// ========================================
+// SERVICES SECTION
+// ========================================
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.service-card {
+    min-height: 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr 20px;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px 14px;
+
+    background: $nx-white;
+
+    border:
+        1px solid $nx-border;
+
+    border-radius: 8px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
+    &:hover {
+        border-color: #bfdbfe;
+
+        box-shadow:
+            0 10px 26px rgba(15, 23, 42, 0.06);
+
+        transform: translateY(-2px);
+    }
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    background: $nx-primary-light;
+
+    color: $nx-primary;
+
+    border-radius: 16px;
+
+    svg {
+        width: 27px;
+        height: 27px;
+
+        fill: none;
+
+        stroke: currentColor;
+        stroke-width: 1.6;
+
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}
+
+.service-content {
+
+    h3 {
+        color: $nx-dark;
+
+        font-size: 15px;
+        font-weight: 650;
+
+        margin: 0 0 6px;
+    }
+
+    p {
+        color: $nx-body;
+
+        font-size: 12px;
+        line-height: 1.5;
+
+        margin: 0;
+    }
+}
+
+.service-arrow {
+    color: $nx-primary;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.service-card:hover {
+
+    .service-arrow {
+        transform:
+            translateX(3px);
+    }
+}
+
+
+// ========================================
+// WHY CHOOSE NEXORA
+// ========================================
+
+.services-why {
+    background:
+        linear-gradient(
+            100deg,
+            $nx-primary-light 0%,
+            #f4f9ff 58%,
+            #e7f1ff 100%
+        );
+}
+
+.services-why-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.services-why-content {
+
+    h2 {
+        color: $nx-dark;
+
+        font-size: 34px;
+
+        letter-spacing: -0.8px;
+
+        margin: 0 0 11px;
+    }
+
+    > p {
+        max-width: 520px;
+
+        color: $nx-body;
+
+        font-size: 14px;
+        line-height: 1.65;
+
+        margin: 0 0 20px;
+    }
+}
+
+.services-benefits {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.services-benefit {
+
+    .benefit-icon {
+        width: 42px;
+        height: 42px;
+
+        display: grid;
+        place-items: center;
+
+        background: $nx-white;
+
+        color: $nx-primary;
+
+        border-radius: 50%;
+
+        margin-bottom: 12px;
+
+        
+    }
+
+    .benefit-icon svg {
+        width: 28px;
+        height: 28px;
+
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    h3 {
+        color: $nx-dark;
+
+        font-size: 13px;
+
+        margin: 0 0 6px;
+    }
+
+    p {
+        color: $nx-body;
+
+        font-size: 11px;
+        line-height: 1.5;
+
+        margin: 0;
+    }
+}
+
+
+// ========================================
+// TEAM VISUAL
+// ========================================
+
+.services-team-visual {
+    width: 100%;
+    height: 295px;
+
+    overflow: hidden;
+    border-radius: $nx-radius-xl;
+}
+
+.services-team-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+// ========================================
+// PROCESS
+// ========================================
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 45px
+        1fr 45px
+        1fr 45px
+        1fr;
+
+    align-items: start;
+}
+
+.process-step {
+    text-align: center;
+}
+
+.process-step-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 19px;
+}
+
+.process-number,
+.process-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: $nx-primary-light;
+
+    color: $nx-primary;
+
+    border-radius: 50%;
+}
+
+.process-number {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.process-icon {
+    font-size: 18px;
+}
+
+.process-step {
+
+    h3 {
+        color: $nx-dark;
+
+        font-size: 14px;
+
+        margin: 0 0 7px;
+    }
+
+    p {
+        max-width: 165px;
+
+        color: $nx-body;
+
+        font-size: 11px;
+        line-height: 1.55;
+
+        margin: 0 auto;
+    }
+}
+
+.process-line {
+    height: 1px;
+
+    border-top:
+        1px dashed $nx-border;
+
+    margin-top: 26px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.services-cta {
+    position: relative;
+    overflow: hidden;
+    background: #102a4C;
+    color: $nx-white;
+    padding: 21px 0;
+}
+
+.services-cta::before,
+.services-cta::after {
+    content: "";
+    position: absolute;
+    
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.services-cta::before {
+    width: 520px;
+    height: 520px;
+    top: -300px;
+    left: -120px;
+}
+
+.services-cta::after {
+    width: 480px;
+    height: 480px;
+    top: -250px;
+    right: -100px;
+}
+
+.services-cta .container {
+    position: relative;
+    z-index: 1;
+}
+
+.services-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.services-cta-content {
+    max-width: 650px;
+}
+
+.services-cta-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: rgba($nx-white, 0.78);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.services-cta h2 {
+    margin: 0 0 10px;
+    color: $nx-white;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    span {
+        color: $nx-primary;
+    }
+}
+
+.services-cta p {
+    max-width: 560px;
+    margin: 0;
+    color: rgba($nx-white, 0.68);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.services-cta-action {
+    flex-shrink: 0;
+}
+
+.services-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 38px;
+    padding: 0 10px;
+
+    
+    border-radius: 6px;
+
+    background: $nx-white;
+    color: $nx-dark;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.services-cta-btn span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.services-cta-btn:hover {
+    background: $nx-primary-light;
+    color: $nx-dark;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+    
+    .services-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .services-hero-content {
+        max-width: 720px;
+        padding-bottom: 24px;
+    }
+
+    .services-hero-visual {
+        width: 100%;
+        max-width: 720px;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: auto;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+        align-self: start;
+    }
+
+    .services-hero-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .services-visual-frame {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: -5px;
+        margin-bottom: 30px;
+        padding: 0;
+
+        overflow: hidden;
+        border-radius: $nx-radius-lg;
+    }
+
+    .services-section {
+        transform: translateY(-40px);
+    }
+
+    .services-section .services-grid {
+        margin-top: -10px;
+    }
+
+    .services-why {
+        margin-top: -70px;
+    }
+
+    .services-why > .container {
+        transform: translateY(-30px);
+    }
+
+    .services-why .nx-eyebrow {
+        transform: translateY(-10px);
+    }
+
+    .services-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-benefit {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        column-gap: 10px;
+        row-gap: 0;
+        align-items: start;
+    }
+
+    .services-benefit .benefit-icon {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        margin-bottom: 0;
+    }
+
+    .services-benefit > div:last-child {
+        display: contents;
+    }
+
+    .services-benefit h3 {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .services-benefit p {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 2px 0 0;
+        line-height: 1.4;
+    }
+
+    .services-team-visual {
+        transform: translateY(-30px);
+        margin-bottom: -90px;
+    }
+
+    .services-process {
+        transform: translateY(-40px);
+        
+        margin-bottom: -60px;
+    }
+
+}
+
+/* ========================================
+   SERVICES HERO — MOBILE
+========================================= */
+@media (max-width: 767.98px) {
+
+    .services-hero-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services-hero-content {
+        padding: 24px 0 44px;
+    }
+
+    .services-hero-content h1 {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .services-hero-content p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .services-hero-visual {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: -48px;
+        margin-bottom: 24px;
+    }
+
+    .services-visual-frame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: $nx-radius-xl;
+    }
+
+    .services-visual-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+    /* ========================================
+        SERVICES SECTION — MOBILE
+    ========================================= */    
+    .services-section {
+        padding-top: 20px;
+        padding-bottom: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        margin-top: -8px;
+    }
+
+
+    /* ========================================
+        SERVICES WHY CHOOSE — MOBILE
+    ========================================= */
+
+    .services-why {
+        padding-top: 20px;
+        padding-bottom: 26px;
+    }
+
+    .services-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-why-content {
+        width: 100%;
+    }
+
+    .services-benefits {
+        display: flex;
+        flex-direction: column;
+        gap: $nx-space-1;
+    }
+
+    .services-benefit {
+        display: flex;
+        align-items: center;
+        gap: $nx-space-4;
+    }
+
+    .benefit-icon {
+        display: inline-flex;
+        flex: 0 0 48px !important;
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    .benefit-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .services-benefit > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .services-team-visual {
+        width: 100%;
+        height: 260px;
+        margin-top: -40px;
+    }
+
+    /* ========================================
+        SERVICES PROCESS — MOBILE
+    ======================================== */
+
+    .services-process {
+        padding-top: 20px;
+        padding-bottom: 24px;
+        overflow-x: hidden;
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        gap: $nx-space-6;
+    }
+
+    .process-step {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .process-step-top {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .process-line {
+        display: none;
+    }
+
+    /* ========================================
+   SERVICES CTA — MOBILE
+======================================== */
+
+    .services-cta {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+    .services-cta-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $nx-space-6;
+    }
+
+    .services-cta-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .services-cta-eyebrow {
+        display: block;
+        margin-bottom: $nx-space-4;
+    }
+
+    .services-cta-content h2 {
+        margin-bottom: $nx-space-4;
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .services-cta-content h2 span {
+        color: $nx-primary;
+    }
+
+    .services-cta-content p {
+        max-width: 100%;
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .services-cta-action {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .services-cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+
+
